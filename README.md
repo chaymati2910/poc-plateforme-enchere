@@ -20,3 +20,47 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 ## Palettes de couleurs
 
 ### Proposition 1
+
+![sparkles](src/resources/img/palette-couleur/palette1.png)
+
+* Orange :
+  * Plus agressif, l’orange est parfait pour les « call to action » et provoque l’envie d’acheter ou de s’abonner. 
+  * Fanta, qui vise un public jeune dans son marketing, propose un orange vif qui capte l’attention d’un public très demandé et provoque un sentiment de confiance lors de l’achat.
+
+* Rouge (Urgence, pousser à l'acte d'achat et de clic) :
+  * L’excitation. Le rouge est associé à l’urgence, lors des soldes et promotions, c’est principalement le rouge qui est utilisé. 
+  * Il représente également la jeunesse et l’énergie, deux points sur lesquels Coca-Cola s’appuie énormément.
+
+* Gris (Connaissance et Neutralité) :
+  * Parité entre client et prestataire
+  * L’innovation est très représentée par la couleur grise. Loin d’être fade, elle détermine souvent la connaissance et la neutralité. 
+  * Apple utilise son logo gris depuis des années et fait souvent figure de grand innovateur.
+
+### Proposition 2
+
+![sparkles](src/resources/img/palette-couleur/palette2.png)
+
+* Blanc :
+  * Assimilé à la pureté, à la paix et qu'il est le symbole de la sagesse, l'innocence, la pureté et le Divin.
+
+* Bleu nuit : 
+  * Plonge le regard. 
+  * Pousse à l’introspection. 
+  * Sérénité, apaisement, sagesse, loyauté. 
+  * Capte l’attention.
+  * Garder le client le plus longtemps possible sur le site et faire en sorte qu’il se sente seul à réfléchir à ses actes. Mêlé au bleu plus clair qui rappelle au sérieux et à l’aspect de droiture d’entreprise. 
+
+### Proposition 3
+
+![sparkles](src/resources/img/palette-couleur/palette3.png)
+
+* Noir :
+  * Associé à un fond du site en blanc le noir va apporter une touche Feng Shui
+  * Suscite la puissance
+  * Audace, formalité, luxe, mystère, force
+  * Sony, Disney, Nike...
+
+* Vert : 
+  * Tres utilisée pour promouvoir des produits
+
+
