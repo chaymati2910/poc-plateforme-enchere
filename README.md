@@ -62,5 +62,8 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 * Vert : 
   * Tres utilisée pour promouvoir des produits
+  * Stimulant de concentration
+  * Attire l'attention (exemple le feu vert d'un feu de circulation et donne le GO)
+  * Couleur de l'espoir, méditation, inspiration
 
 
