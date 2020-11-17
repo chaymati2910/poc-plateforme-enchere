@@ -16,6 +16,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 | En tant qu’utilisateur    | Pouvoir naviguer de façon simple sur le site              | Comprendre rapidement le fonctionnement           |
 | En tant qu’utilisateur    | Que le site soit disponible sous plusieurs format d’écran | Consulter sur tout type de support                |
 | En tant qu’utilisateur    | Savoir comment fonctionne les enchères (règles)           | Comprendre le fonctionnement des enchères         |
+| En tant qu’utilisateur    | Savoir combien j'économise en achetant un produit         | Pousser à l'achat si l'economie est intéressante  |
 
 ## Palettes de couleurs
 
