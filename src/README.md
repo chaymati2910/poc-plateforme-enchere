@@ -22,7 +22,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ### Proposition 1
 
-![sparkles](src/resources/img/palette-couleur/palette1.png)
+![sparkles](resources/img/palette-couleur/palette1.png)
 
 * Orange :
   * Plus agressif, l’orange est parfait pour les « call to action » et provoque l’envie d’acheter ou de s’abonner. 
@@ -39,7 +39,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ### Proposition 2
 
-![sparkles](src/resources/img/palette-couleur/palette2.png)
+![sparkles](resources/img/palette-couleur/palette2.png)
 
 * Blanc :
   * Assimilé à la pureté, à la paix et qu'il est le symbole de la sagesse, l'innocence, la pureté et le Divin.
@@ -53,7 +53,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ### Proposition 3
 
-![sparkles](src/resources/img/palette-couleur/palette3.png)
+![sparkles](resources/img/palette-couleur/palette3.png)
 
 * Noir :
   * Associé à un fond du site en blanc le noir va apporter une touche Feng Shui
