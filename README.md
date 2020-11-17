@@ -50,3 +50,17 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
   * Capte l’attention.
   * Garder le client le plus longtemps possible sur le site et faire en sorte qu’il se sente seul à réfléchir à ses actes. Mêlé au bleu plus clair qui rappelle au sérieux et à l’aspect de droiture d’entreprise. 
 
+### Proposition 3
+
+![sparkles](img/palette-couleur/palette3.png)
+
+* Noir :
+  * Associé à un fond du site en blanc le noir va apporter une touche Feng Shui
+  * Suscite la puissance
+  * Audace, formalité, luxe, mystère, force
+  * Sony, Disney, Nike...
+
+* Vert : 
+  * Tres utilisée pour promouvoir des produits
+
+
