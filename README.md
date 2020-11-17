@@ -18,6 +18,11 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 | En tant qu’utilisateur    | Savoir comment fonctionne les enchères (règles)           | Comprendre le fonctionnement des enchères         |
 | En tant qu’utilisateur    | Savoir combien j'économise en achetant un produit         | Pousser à l'achat si l'economie est intéressante  |
 
+
+## Wireframe
+
+![sparkles](src/resources/Wireframe/Wireframe-poc-enchere.jpg)
+
 ## Palettes de couleurs
 
 ### Proposition 1
