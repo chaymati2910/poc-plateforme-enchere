@@ -10,13 +10,11 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 | En tant qu’administrateur | Paramétrer le produit à mettre aux enchères               | Afficher la photo et la designation du produit    |
 | En tant qu’administrateur | Paramétrer les conditions de lancement de l’enchère       | Donner le prix de départ et la durée initiale     |
 | En tant qu’administrateur | Paramétrer les conditions de l’enchère                    | Coût du clic, durée ajoutée au clic, prix du clic |
-| En tant qu’administrateur | Savoir combien je gagne sur une enchère                   | Pour facturer et calculer mon ROI                 |
 | En tant qu’utilisateur    | Consulter les produits en ligne                           | Voir l’évolution de des enchères                  |
 | En tant qu’utilisateur    | Connaître le temps restant de l’enchère                   | Savoir quand celle-ci prend fin                   |
 | En tant qu’utilisateur    | Pouvoir naviguer de façon simple sur le site              | Comprendre rapidement le fonctionnement           |
 | En tant qu’utilisateur    | Que le site soit disponible sous plusieurs format d’écran | Consulter sur tout type de support                |
 | En tant qu’utilisateur    | Savoir comment fonctionne les enchères (règles)           | Comprendre le fonctionnement des enchères         |
-| En tant qu’utilisateur    | Savoir combien j'économise en achetant un produit         | Pousser à l'achat si l'economie est intéressante  |
 
 
 ## Wireframe
