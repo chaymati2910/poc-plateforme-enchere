@@ -16,6 +16,7 @@
     <?php include 'includes/header.php'; ?>
 
     <!--LISTE DES PRODUITS-->
+    <?php include 'includes/listeEnchere.php'; ?>
 
     <!--AJOUT NOUVELLE ENCHERE-->
 
