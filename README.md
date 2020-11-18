@@ -27,7 +27,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ### Proposition 1
 
-![sparkles](src/resources/Wireframe/wireframe2.jpg)
+![sparkles](src/resources/img/palette-couleur/palette1.png)
 
 * Orange :
   * Plus agressif, l’orange est parfait pour les « call to action » et provoque l’envie d’acheter ou de s’abonner. 
