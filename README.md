@@ -21,13 +21,13 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ## Wireframe
 
-![sparkles](src/resources/Wireframe/Wireframe-poc-enchere.jpg)
+![sparkles](src/resources/Wireframe/wireframe2.jpg)
 
 ## Palettes de couleurs
 
 ### Proposition 1
 
-![sparkles](src/resources/img/palette-couleur/palette1.png)
+![sparkles](src/resources/Wireframe/wireframe2.jpg)
 
 * Orange :
   * Plus agressif, l’orange est parfait pour les « call to action » et provoque l’envie d’acheter ou de s’abonner. 
