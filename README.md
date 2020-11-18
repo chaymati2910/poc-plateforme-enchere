@@ -28,6 +28,11 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ## Palettes de couleurs
 
+
+### Validation
+
+![sparkles](src/resources/img/palette-couleur/palette_finale.png)
+
 ### Proposition 1
 
 ![sparkles](src/resources/img/palette-couleur/palette1.png)
@@ -75,9 +80,6 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
   * Attire l'attention (exemple le feu vert d'un feu de circulation et donne le GO)
   * Couleur de l'espoir, méditation, inspiration
 
-### Validation
-
-![sparkles](src/resources/img/palette-couleur/palette_finale.png)
 
 
 
