@@ -2,7 +2,7 @@
     <h2 class="text-center mb-5">ARTICLES</h2>
     
     <div class="card-deck col-lg-10 mx-auto">
-        <div class="card mr-5" style="width: 18rem;">
+        <div class="card mr-lg-5 ml-lg-0 ml-2" style="width: 18rem;">
           <img src="../ressources/img/moran-8cMPxOqkLE8-unsplash.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Description</h5>
@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="card mr-5" style="width: 18rem;">
+        <div class="card mr-5 ml-lg-0 ml-2" style="width: 18rem;">
           <img src="../ressources/img/nikolay-tarashchenko-fti42Pzxcis-unsplash.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Description</h5>
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card ml-lg-0 ml-2" style="width: 18rem;">
           <img src="../ressources/img/xps-1gLdTsX3_70-unsplash.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Description</h5>
