@@ -7,8 +7,11 @@
           <div class="card-body">
             <h5 class="card-title">Description</h5>
             <h4 class="display-6">3 €</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Enchérir</a>
+            <p class="card-text">Prix du clic : 50 cts/clic</p>
+            <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-primary mx-auto">Enchérir</a>
+            </div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -16,8 +19,11 @@
           <div class="card-body">
             <h5 class="card-title">Description</h5>
             <h4 class="display-6">3 €</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Enchérir</a>
+            <p class="card-text">Prix du clic : 50 cts/clic</p>
+            <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-primary mx-auto">Enchérir</a>
+            </div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -25,8 +31,11 @@
           <div class="card-body">
             <h5 class="card-title">Description</h5>
             <h4 class="display-6">3 €</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Enchérir</a>
+            <p class="card-text">Prix du clic : 50 cts/clic</p>
+            <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-primary mx-auto">Enchérir</a>
+            </div>
           </div>
         </div>
     </div>
