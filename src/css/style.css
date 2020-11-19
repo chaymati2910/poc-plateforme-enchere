@@ -3,3 +3,17 @@ html, body{
     padding: 0 !important;
     width: 100% !important;
 }
+
+@media screen and (max-width: 380px) {
+    .card {
+        margin-bottom: 4rem !important;
+    }
+}
+
+.duree {
+    background: white;
+    opacity: .8;
+    height: 10%;
+    border-bottom-right-radius: 30px;
+    font-size: 2rem;
+}
