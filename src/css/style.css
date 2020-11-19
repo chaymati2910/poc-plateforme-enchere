@@ -3,3 +3,40 @@ html, body{
     padding: 0 !important;
     width: 100% !important;
 }
+
+.labelForm{
+    width: 180px;
+}
+.items{
+    margin-bottom: 30px !important;
+}
+.form-control{
+    width: 400px !important;   
+}
+.fileUpload{
+    width: 580px;
+    height: 70px;
+    background-color: grey;
+}
+
+@media (max-width: 375px){
+    button{
+        margin-top: 30px;
+    }
+    .items{
+        flex-direction: column !important;
+        margin-bottom: 30px !important;
+    }
+    .form-control{
+        width: 100% !important;
+    }
+    .labelForm{
+       align-self: flex-start;
+
+    }
+    .fileUpload{
+        width: 100%;
+        height: 80px;
+        background-color: grey;
+    }
+}
