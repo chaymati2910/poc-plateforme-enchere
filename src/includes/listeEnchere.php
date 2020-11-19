@@ -3,6 +3,7 @@
     
     <div class="card-deck col-lg-10 mx-auto">
         <div class="card mr-lg-5 ml-lg-0 ml-2" style="width: 18rem;">
+        <div class="duree position-absolute w-50 text-center rounded-right">15s </div>
           <img src="../ressources/img/moran-8cMPxOqkLE8-unsplash.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title font-weight-bold">Description</h5>
