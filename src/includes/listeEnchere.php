@@ -11,7 +11,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
             <p class="card-text">Prix du clic : 50 cts/clic</p>
             <p class="card-text">Prix de l'enchère : 1 cts/clic</p>
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn-lg btn-primary mx-auto">Enchérir</a>
+              <a href="#" class="btn btn-primary mx-auto w-50">Enchérir</a>
             </div>
           </div>
         </div>
