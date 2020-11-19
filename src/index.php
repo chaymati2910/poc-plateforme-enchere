@@ -22,6 +22,6 @@
     <?php include 'includes/listeEnchere.php'; ?>
 
     <!--AJOUT NOUVELLE ENCHERE-->
-
+ tst
 </body>
 </html>
