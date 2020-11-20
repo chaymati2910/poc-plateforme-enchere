@@ -4,6 +4,7 @@ html, body{
     width: 100% !important;
     font-size: 20px;
     letter-spacing: 5%;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 @media screen and (max-width: 380px) {
