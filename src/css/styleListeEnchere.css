@@ -1,0 +1,31 @@
+html, body{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    font-size: 20px;
+    letter-spacing: 5%;
+}
+
+@media screen and (max-width: 380px) {
+    .card {
+        margin-bottom: 4rem !important;
+    }
+}
+
+.duree {
+    background: #FF9800;
+    /* opacity: .8; */
+    height: 10%;
+    font-size: 1rem;
+    color: white;
+}
+
+#articles .btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9800;
+    border: none;
+    width: 160px;
+    height: 35px;
+    font-size: 18px;
+}
