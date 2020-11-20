@@ -2,30 +2,59 @@ html, body{
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
+    font-size: 20px;
+    letter-spacing: 5%;
+    font-family: 'Roboto', sans-serif !important;
 }
-
+h2{
+    font-size: 36px;
+}
 .labelForm{
-    width: 180px;
+    width: 250px !important;
+    text-align: center;
 }
 .items{
     margin-bottom: 30px !important;
+    width: 520px !important;
+    padding: 10px !important;
 }
 .form-control{
-    width: 400px !important;   
+    width: 250px !important;   
 }
 .fileUpload{
-    width: 580px;
+    width: 520px;
     height: 70px;
     background-color: grey;
+    cursor: pointer;
 }
-
+.bg-light{
+    background-color: #ECF0F1 !important;
+}
+.btn-warning{
+    background-color: #FF9800 !important;
+}
+form > h3{
+    font-size: 24px;
+}
+.btnAjoutEnchere{
+    letter-spacing: 5% !important;
+    font-size: 18px;
+    width: 220px;
+    height: 50px;
+}
 @media (max-width: 375px){
+    h2{
+        text-align: center;
+    }
     button{
         margin-top: 30px;
     }
     .items{
         flex-direction: column !important;
         margin-bottom: 30px !important;
+        width: 320px !important;
+        background: none !important;
+        padding: 0;
     }
     .form-control{
         width: 100% !important;
@@ -35,8 +64,11 @@ html, body{
 
     }
     .fileUpload{
-        width: 100%;
+        width: 300px !important;
         height: 80px;
         background-color: grey;
+    }
+    .labelForm{
+        text-align: left;
     }
 }
