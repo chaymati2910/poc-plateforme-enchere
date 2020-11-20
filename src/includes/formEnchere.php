@@ -4,7 +4,7 @@
     <form class="container-fluid w-100 d-flex justify-content-center align-items-center flex-column">
         <div class="d-flex justify-content-center align-items-center mb-3 items bg-light">
             <label class="labelForm" for="#description">Description :</label>
-            <textarea class="form-control" id="description" maxlength="24" placeholder="24 caractères maximum" required aria-label="With textarea"></textarea>
+            <input type="text" class="form-control" id="description" maxlength="24" placeholder="24 caractères maximum" pattern="[^<->]" required>
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <label class="fileUpload d-flex justify-content-center align-items-center bg-light">
