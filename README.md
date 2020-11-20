@@ -19,10 +19,10 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ## Wireframe
 ### Wireframe-desktop
-![sparkles](ressources/Wireframe/wireframe2.jpg)
+![sparkles](ressources/Wireframe/wireframe.jpg)
 
 ### Wireframe-mobile
-![sparkles](ressources/Wireframe/wireframe2-mobile.jpg)
+![sparkles](ressources/Wireframe/wireframe-mobile.jpg)
 
 ## Palettes de couleurs
 
