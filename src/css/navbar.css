@@ -15,7 +15,6 @@
     
 }
 
-
 #mainNav{
   background-color: #81C784 !important; 
 }
@@ -48,10 +47,14 @@ opacity: 1;
 transform: scale(1);
 }
 
+/******** MEDIA QUERIES ********/
+
 @media (max-width: 360px) {
+
   #title-header {
     font-size: 0.8em;
     text-transform: uppercase;
   }
+  
 }
 
