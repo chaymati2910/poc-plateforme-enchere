@@ -7,7 +7,7 @@
         00 : 00 : 00</div>
           <img src="../ressources/img/moran-8cMPxOqkLE8-unsplash.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold">Macbook avec logo dessus</h5>
+            <h5 class="card-title font-weight-bold">Macbook</h5>
             <h4 class="display-6 font-weight-bold">3 €</h4>
             <p class="card-text m-0">Prix du clic : 50 cts/clic</p>
             <p class="card-text mb-4">Prix de l'enchère : 1 cts/clic</p>
