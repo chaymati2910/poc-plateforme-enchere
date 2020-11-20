@@ -47,3 +47,11 @@ opacity: 1;
 -webkit-transform: scale(1);
 transform: scale(1);
 }
+
+@media (max-width: 360px) {
+  #title-header {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+}
+
