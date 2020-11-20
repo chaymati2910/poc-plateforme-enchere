@@ -1,6 +1,6 @@
 #listeenchere:after{
     content: '';
-    position: absolute;
+    position: fixed;
     left: 859px;
     display: inline-block;
     height: 1em;
@@ -22,7 +22,7 @@
 
 #encherenav:after{
   content: '';
-  position: absolute;
+  position: fixed;
   left: 1040px;
   display: inline-block;
   height: 1em;
