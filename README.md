@@ -19,7 +19,7 @@ plateforme de mise aux enchères d' un produit proposé par l’administrateur d
 
 ## Wireframe
 ### Wireframe-desktop
-![sparkles](ressources/Wireframe/wireframe.jpg)
+![sparkles](ressources/Wireframe/wireframe-desktop.jpg)
 
 ### Wireframe-mobile
 ![sparkles](ressources/Wireframe/wireframe-mobile.jpg)
