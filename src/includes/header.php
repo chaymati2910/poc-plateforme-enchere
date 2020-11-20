@@ -1,6 +1,6 @@
 
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top mb-5" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top mb-5" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger text-white" href="#page-top">Ventes aux enchères</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
