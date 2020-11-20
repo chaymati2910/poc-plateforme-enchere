@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger text-white effect-underline " id="listeenchere" href="../index.php">Liste des enchères</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="../pages/ajoutEnchere.php" id="encherenav">Ajouter une enchère</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="../src/pages/ajoutEnchere.php" id="encherenav">Ajouter une enchère</a></li>
 
                 </ul>
             </div>
