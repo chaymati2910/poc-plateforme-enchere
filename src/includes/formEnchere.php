@@ -23,7 +23,7 @@
         </div>
         <div class="d-flex justify-content-center align-items-center mb-3 items bg-light">
             <label class="labelForm" for="#prix_clic">Prix du clic (cts):</label>
-            <input type="number" class="form-control" placeholder="En centimes" aria-label="prix_clic" id="prix_clic" required aria-describedby="basic-addon1" max="1" min="0" step="1">
+            <input type="number" class="form-control" placeholder="En centimes" aria-label="prix_clic" id="prix_clic" required aria-describedby="basic-addon1" max="0.99" min="0" step="0.01">
         </div>
         <div class="d-flex justify-content-center align-items-center mb-3 items bg-light">
             <label class="labelForm" for="#augmentation_prix">Augmentation du prix (cts):</label>
