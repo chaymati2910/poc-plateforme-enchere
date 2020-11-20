@@ -1,6 +1,6 @@
 #listeenchere:after{
     content: '';
-    position: absolute;
+    position: fixed;
     left: 859px;
     display: inline-block;
     height: 1em;
@@ -12,6 +12,7 @@
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: scale(0,1);
     transform: scale(0,1);
+    
 }
 
 #listeenchere:hover:after {
@@ -22,7 +23,7 @@
 
 #encherenav:after{
   content: '';
-  position: absolute;
+  position: fixed;
   left: 1040px;
   display: inline-block;
   height: 1em;
