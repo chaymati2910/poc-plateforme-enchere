@@ -1,6 +1,6 @@
 <?php
     //Analyse validation formulaire
-    var_dump($_SESSION);
+    var_dump($_FILES);
     function validationForm () {
   
         $inputsRequired = ["description", "prix_lancement", "duree", "prix_clic", "augmentation_duree", "augmentation_prix"];
@@ -23,7 +23,7 @@
             //Contrôle de l'image
             $fileName = $_FILES['image_upload']['name'];
             if($fileName !== ""){
-                $maxSize = 100000;
+                $maxSize = 1000000000000;
                 $validExt = array('.jpg', '.jpeg', '.gif', '.png');
     
                 if($_FILES['image_upload']['error'] > 0)
@@ -48,6 +48,7 @@
                 $tmpName = $_FILES['image_upload']['tmp_name'];
                 $idName = md5(uniqid(rand(), true));
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
+                $_POST['image_upload'] = $idName;
                 $resultat = move_uploaded_file($tmpName, $fileName);
                 
                 if($resultat)
@@ -70,31 +71,6 @@
             
         }
         };   
-        
-        function listeEnchere(){
-
-            echo 'Je suis une liste';
-            print_r($DUMMY_ARRAY);
-            // foreach($DUMMY_ARRAY as $item){
-            //     echo '
-            //     <div class="card  shadow m-lg-4" style="width: 23rem;">
-            //     <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold">
-            //             00 : 00 : 00</div>
-            //         <img src="../ressources/img/moran-8cMPxOqkLE8-unsplash.jpg" class="card-img-top" alt="...">
-            //         <div class="card-body">
-            //             <h5 class="card-title font-weight-bold"></h5>
-            //             <h4 class="display-6 font-weight-bold">3 €</h4>
-            //             <p class="card-text m-0">Prix du clic : 50 cts/clic</p>
-            //             <p class="card-text mb-4">Prix de l\'enchère : 1 cts/clic</p>
-            //             <div class="text-center">
-            //                 <button class="btn btn-primary p-0">Enchérir</button>
-            //             </div>
-            //         </div>
-            //     </div>
-            //     ';
-            // }
-            
-        }
     ?>
 
 
