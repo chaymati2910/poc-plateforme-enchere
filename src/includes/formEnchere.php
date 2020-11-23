@@ -1,4 +1,5 @@
 <?php include 'libs/functions.php'; ?>
+
     <div class="d-flex justify-content-center">
         <h2 class="mb-5 text-uppercase font-weight-bold">Ajout d'une enchère</h2>
     </div>

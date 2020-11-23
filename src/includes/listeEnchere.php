@@ -1,4 +1,5 @@
 <?php include 'libs/functions.php'; ?>
+<?php include 'includes/timer.php'; ?>
 <?php 
 //Ici on gere l'ajout du prix à augmenter
     if(isset($_POST['submit'])){
@@ -12,9 +13,9 @@
         
         <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
           <div class="card  shadow m-lg-4" style="width: 18rem;">
-                <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold">
-                        <?= $items['duree'] ?></div>
-                    <img src="../ressources/img/<?= $items['image_upload'] ?>.jpg" class="card-img-top img-fluid" alt="...">
+                <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="<?= $key?>">
+                </div>
+                    <img src="../ressources/img/<?= $items['image_upload'] ?>.jpg" class="card-img-top img-fluid" style="height:230px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
                         <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
