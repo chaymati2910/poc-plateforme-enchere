@@ -9,7 +9,7 @@
           <div class="card  shadow m-lg-4" style="width: 23rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold">
                         <?= $items['duree'] ?></div>
-                    <img src="../ressources/img/moran-8cMPxOqkLE8-unsplash.jpg" class="card-img-top" alt="...">
+                    <img src="../ressources/img/<?= $items['image'] ?>.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
                         <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>

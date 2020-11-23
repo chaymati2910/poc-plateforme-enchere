@@ -1,53 +1,4 @@
-<?php
-session_start();
-?>
-<?php
-// to change a session variable, just overwrite it
-$_SESSION["DUMMY_ARRAY"] = [
-        [
-            'description' => 'Iphone X',
-            'prix_lancement' => 1,
-            'duree' => 48,
-            'prix_clic' => 0.50,
-            'augmentation_duree' => 30,
-            'augmentation_prix' => 0.30,
-            'date_lancement' => 'XX'
-        ],
-        [
-            'description' => 'Iphone X',
-            'prix_lancement' => 1,
-            'duree' => 48,
-            'prix_clic' => 0.50,
-            'augmentation_duree' => 30,
-            'augmentation_prix' => 0.30
-        ],
-        [
-            'description' => 'Iphone X',
-            'prix_lancement' => 1,
-            'duree' => 48,
-            'prix_clic' => 0.50,
-            'augmentation_duree' => 30,
-            'augmentation_prix' => 0.30
-        ],
-        [
-            'description' => 'Iphone X',
-            'prix_lancement' => 1,
-            'duree' => 48,
-            'prix_clic' => 0.50,
-            'augmentation_duree' => 30,
-            'augmentation_prix' => 0.30
-        ],
-        [
-            'description' => 'Iphone X',
-            'prix_lancement' => 1,
-            'duree' => 48,
-            'prix_clic' => 0.50,
-            'augmentation_duree' => 30,
-            'augmentation_prix' => 0.30
-        ]
-    ];
-print_r($_SESSION);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +15,7 @@ print_r($_SESSION);
 </head>
 <body>
     <!--HEADER-->
-
+    <?php include 'includes/session.php'; ?>
     <?php include 'includes/header.php'; ?>
 
 
@@ -78,7 +29,3 @@ print_r($_SESSION);
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
-<?php
-// destroy the session
-session_destroy();
-?>

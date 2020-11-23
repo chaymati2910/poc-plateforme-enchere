@@ -43,3 +43,4 @@
             <button type="submit" name="submit" class="btn btn-warning text-uppercase text-white font-weight-bold btnAjoutEnchere mb-5" style="width:220px;">Ajouter l'enchère</button>
         </div>
     </form>
+    

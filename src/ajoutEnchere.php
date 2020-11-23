@@ -14,7 +14,7 @@
 </head>
 <body>
     <!--HEADER-->
-
+    <?php include 'includes/session.php'; ?>
     <?php include 'includes/header.php'; ?>
 
     <!--AJOUT NOUVELLE ENCHERE-->

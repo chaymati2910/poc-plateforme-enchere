@@ -1,10 +1,8 @@
 <?php
     //Analyse validation formulaire
     var_dump($_SESSION);
-    
-
     function validationForm () {
-        global $DUMMY_ARRAY;
+  
         $inputsRequired = ["description", "prix_lancement", "duree", "prix_clic", "augmentation_duree", "augmentation_prix"];
         foreach($inputsRequired as $input){
             if($_POST["$input"] == ""){
@@ -56,9 +54,10 @@
                 {
                     
                     // $DUMMY_ARRAY[] = $_POST;
-                    print_r($_SESSION['DUMMY_ARRAY']);
-                    array_push($_SESSION['DUMMY_ARRAY'], $_POST);
-                  
+                    $tempArray = $_SESSION['DUMMY_ARRAY'];
+                    array_push($tempArray, $_POST);
+                    $_SESSION['DUMMY_ARRAY'] = $tempArray;
+                    var_dump($_SESSION);
                     echo '<div class="col-12 d-flex justify-content-center">
                             <div class="alert alert-success">Le produit a bien été ajouté !
                             </div>
@@ -74,7 +73,8 @@
         
         function listeEnchere(){
 
-
+            echo 'Je suis une liste';
+            print_r($DUMMY_ARRAY);
             // foreach($DUMMY_ARRAY as $item){
             //     echo '
             //     <div class="card  shadow m-lg-4" style="width: 23rem;">
