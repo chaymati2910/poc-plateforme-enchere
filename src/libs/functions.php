@@ -1,6 +1,5 @@
 <?php
     //Analyse validation formulaire
-
     function validationForm () {
   
         $inputsRequired = ["description", "prix_lancement", "duree", "prix_clic", "augmentation_duree", "augmentation_prix"];
