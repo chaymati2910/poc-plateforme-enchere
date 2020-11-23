@@ -1,6 +1,6 @@
 <?php
     //Analyse validation formulaire
-    var_dump($_FILES);
+
     function validationForm () {
   
         $inputsRequired = ["description", "prix_lancement", "duree", "prix_clic", "augmentation_duree", "augmentation_prix"];
@@ -58,7 +58,6 @@
                     $tempArray = $_SESSION['DUMMY_ARRAY'];
                     array_push($tempArray, $_POST);
                     $_SESSION['DUMMY_ARRAY'] = $tempArray;
-                    var_dump($_SESSION);
                     echo '<div class="col-12 d-flex justify-content-center">
                             <div class="alert alert-success">Le produit a bien été ajouté !
                             </div>
