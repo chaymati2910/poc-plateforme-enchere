@@ -4,7 +4,7 @@
     <div class=" d-flex justify-content-center flex-wrap">
         
         <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
-          <div class="card  shadow m-lg-4" style="width: 21rem;">
+          <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold">
                         <?= $items['duree'] ?></div>
                     <img src="../ressources/img/<?= $items['image_upload'] ?>.jpg" class="card-img-top img-fluid" alt="...">
