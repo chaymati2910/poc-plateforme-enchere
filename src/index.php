@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,6 +17,7 @@
 </head>
 <body>
     <!--HEADER-->
+    <?php include 'includes/session.php'; ?>
     <?php include 'includes/header.php'; ?>
 
 
