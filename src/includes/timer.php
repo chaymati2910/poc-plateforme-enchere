@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- Afficher le compte à rebours dans un élément -->
-    <p id="demo"></p>
+    <!-- <p id="demo"></p> -->
 
     <script>
     // Fixez la date à laquelle nous comptons
