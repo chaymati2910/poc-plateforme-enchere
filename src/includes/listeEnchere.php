@@ -9,7 +9,7 @@
 ?>
 <div id="articles" class="container-fluid mt-5">
     <h2 class="text-center mb-5 font-weight-bold">ARTICLES</h2>
-    <div class=" d-flex justify-content-center flex-wrap">
+    <div class=" d-flex justify-content-center flex-wrap"> 
         
         <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
           <div class="card  shadow m-lg-4" style="width: 18rem;">
