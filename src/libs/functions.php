@@ -47,7 +47,7 @@
                 $tmpName = $_FILES['image_upload']['tmp_name'];
                 $idName = md5(uniqid(rand(), true));
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
-                $_POST['image_upload'] = $idName;
+                $_POST['image_upload'] = $idName. "." . $fileExt;
                 $resultat = move_uploaded_file($tmpName, $fileName);
                 
                 if($resultat)

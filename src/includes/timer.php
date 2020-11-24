@@ -25,7 +25,7 @@
 
       // Calculs de temps pour les jours, heures, minutes et secondes
       var days = Math.floor(timeRemaning / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((timeRemaning % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var hours = Math.floor((timeRemaning % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + days * 24;
       var minutes = Math.floor((timeRemaning % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeRemaning % (1000 * 60)) / 1000);
       
