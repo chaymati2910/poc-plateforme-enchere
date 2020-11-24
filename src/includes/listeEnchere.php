@@ -15,7 +15,7 @@
           <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="<?= $key?>">
                 </div>
-                    <img src="../ressources/img/<?= $items['image_upload'] ?>.jpg" class="card-img-top img-fluid" style="height:230px;" alt="...">
+                    <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid" style="height:230px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
                         <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
