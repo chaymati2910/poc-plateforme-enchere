@@ -22,38 +22,43 @@
             //Contrôle de l'image
             $fileName = $_FILES['image_upload']['name'];
             if($fileName !== ""){
-                $maxSize = 1000000000000;
+                
                 $validExt = array('.jpg', '.jpeg', '.gif', '.png');
-    
+                //On verifie dans la variable $_FILES s'il n'y a pas d'erreur interne
                 if($_FILES['image_upload']['error'] > 0)
                 {
                     echo '<div class="alert alert-danger">Erreur survenue lors du transfert de l\'image</div>';
                     die;
                 }
-    
+                $maxSize = 1000000000000;
                 $fileSize = $_FILES['image_upload']['size'];
-                if($fileSize > $maxSize) //Taille de l'image doit être < à 50000
+                if($fileSize > $maxSize) //Taille de l'image doit être < à $maxSize
                 {
                     echo '<div class="alert alert-danger"> Le fichier est trop lourd !!</div>';
                     die;
                 }
-                $fileName = $_FILES['image_upload']['name'];
+                $fileName = $_FILES['image_upload']['name']; //On récupere le nom de l'image et on recherche sone xtension puis on compare dans les extensions valides
                 $fileExt = strtolower(substr(strrchr($fileName, '.'), 1));
                 if(!in_array("." . $fileExt, $validExt)){
                     echo '<div class="alert alert-danger">Le fichier n\'est pas une image !!</div>';
                     die;
                 }
     
-                $tmpName = $_FILES['image_upload']['tmp_name'];
+                $tmpName = $_FILES['image_upload']['tmp_name']; //On attribue ici un unique id au nom de l'image puis on donne le nom pour la recherche dans le tableau
                 $idName = md5(uniqid(rand(), true));
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
                 $_POST['image_upload'] = $idName;
                 $resultat = move_uploaded_file($tmpName, $fileName);
-                
+                // $_POST['date_fin'] = date(DATE_RFC2822);
+                $timeTO = (int)$_POST['duree'];
+                date_default_timezone_set("Indian/Reunion");
+                $_POST['date_fin'] = mktime(0 + $timeTO, 0, 0, date("m")  , date("d"), date("Y"));
+                // var_dump($_POST['date_fin']);
+                // $_POST['date_fin'] = date(DATE_RFC2822, strtotime("+$timeTO hours"));
                 if($resultat)
                 {
                     
-                    // $DUMMY_ARRAY[] = $_POST;
+                    // On prend les donnees dans un tableau temporaire puis on met dans le tableau dans la session
                     $tempArray = $_SESSION['DUMMY_ARRAY'];
                     array_push($tempArray, $_POST);
                     $_SESSION['DUMMY_ARRAY'] = $tempArray;
@@ -69,6 +74,34 @@
             
         }
         };   
+
+        function setInterval()
+        {
+            // $seconds=(int)$milliseconds/1000;
+            while(true)
+            {
+                sleep(6000);
+            }
+        }
+
+        function calculDate($date){
+            $timeFin = $date;
+            $timeAct = time();
+            $timeRemaining = $timeFin - $timeAct;
+            //conversion du temps restant
+            // var_dump($timeAct);
+            // var_dump($timeFin);
+            $min_rest = $timeRemaining / 60;
+            $heure_rest = $min_rest / 24;
+            $jours_rest = $heure_rest / 60;
+            $sec_rest = floor($timeRemaining % 60);
+            $min_rest = floor($min_rest % 60);
+            $heure_rest = floor($heure_rest % 24);
+            $jours_rest = floor($jours_rest);
+
+
+            echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
+        }
     ?>
 
 
