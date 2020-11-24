@@ -22,7 +22,7 @@
                         <p class="card-text m-0">Prix du clic : <?= $items['prix_clic'] ?> cts</p>
                         <p class="card-text mb-4">Enchère : +<?= $items['augmentation_prix'] ?> cts/clic</p>
                         <div class="text-center">
-                        <form method="POST">
+                        <form method="POST" action="#<?= $key?>">
                             <input name="indice" value="<?= $key?>" style="display:none;">
                             <button class="btn btn-primary p-0" name="submit">Enchérir</button>
                         </form>
