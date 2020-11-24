@@ -1,5 +1,5 @@
 <?php include 'libs/functions.php'; ?>
-<?php include 'includes/timer.php'; ?>
+
 <?php 
 //Ici on gere l'ajout du prix à augmenter
     if(isset($_POST['submit'])){
@@ -13,7 +13,7 @@
         
         <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
           <div class="card  shadow m-lg-4" style="width: 18rem;">
-                <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="<?= $key?>">
+                <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="test">
                 </div>
                     <img src="../ressources/img/<?= $items['image_upload'] ?>.jpg" class="card-img-top img-fluid" style="height:230px;" alt="...">
                     <div class="card-body">
@@ -32,3 +32,27 @@
         <?php endforeach; ?>
     </div>
 </div>
+
+<script>
+var sec = 10;
+var duree = document.getElementsByClassName('duree');
+
+function humanReadable() {
+    var pad = function(x) {
+      return (x < 10) ? "0" + x : x;
+    }
+    for (let i = 0; i < duree.length; i++) {
+        duree[i].innerHTML = pad(parseInt(sec / 3600)) + ':' + pad(parseInt(sec / 60 % 60)) + ':' + pad(parseInt(sec % 60));
+    }
+    while (sec > 0) {
+        sec--;
+        break;
+    }
+    if (sec == 0) {
+        duree.innerHTML = 'Terminé';
+    }
+    console.log(sec)
+}
+
+setInterval('humanReadable()', 1000);
+</script>
