@@ -45,19 +45,29 @@
                 }
     
                 $tmpName = $_FILES['image_upload']['tmp_name']; //On attribue ici un unique id au nom de l'image puis on donne le nom pour la recherche dans le tableau
-                $idName = md5(uniqid(rand(), true));
+                
+                //Attribuer un id à l'image
+                $idName = md5(uniqid(rand(), true)); 
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
-                $_POST['image_upload'] = $idName;
-                $resultat = move_uploaded_file($tmpName, $fileName);
-                // $_POST['date_fin'] = date(DATE_RFC2822);
+                $_POST['image_upload'] = $idName . "." . $fileExt;
+
+                //Attribuer un id à l'item
+                $idEnchere = md5(uniqid(rand(), true)); 
+                $_POST['id'] = $idEnchere;
+                
+                //Attribution de l'etat actif ou inactif
+                $_POST['etat'] = 'actif';
+
+                //Gestion de la date de fin => on prend la date actuelle lors de l'ajout puis on ajoute le nombre d'heures que l'utilisateur souhaite
                 $timeTO = (int)$_POST['duree'];
                 date_default_timezone_set("Indian/Reunion");
-                $_POST['date_fin'] = mktime(0 + $timeTO, 0, 0, date("m")  , date("d"), date("Y"));
-                // var_dump($_POST['date_fin']);
-                // $_POST['date_fin'] = date(DATE_RFC2822, strtotime("+$timeTO hours"));
+                $_POST['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
+
+                //Enregistrement de l'image
+                $resultat = move_uploaded_file($tmpName, $fileName);
+                //Si le fichier a bien été déplacé alors on ajoute toutes les données dans le tableau
                 if($resultat)
                 {
-                    
                     // On prend les donnees dans un tableau temporaire puis on met dans le tableau dans la session
                     $tempArray = $_SESSION['DUMMY_ARRAY'];
                     array_push($tempArray, $_POST);
@@ -75,32 +85,27 @@
         }
         };   
 
-        function setInterval()
-        {
-            // $seconds=(int)$milliseconds/1000;
-            while(true)
-            {
-                sleep(6000);
-            }
-        }
-
         function calculDate($date){
-            $timeFin = $date;
-            $timeAct = time();
-            $timeRemaining = $timeFin - $timeAct;
-            //conversion du temps restant
-            // var_dump($timeAct);
-            // var_dump($timeFin);
-            $min_rest = $timeRemaining / 60;
-            $heure_rest = $min_rest / 24;
-            $jours_rest = $heure_rest / 60;
-            $sec_rest = floor($timeRemaining % 60);
-            $min_rest = floor($min_rest % 60);
-            $heure_rest = floor($heure_rest % 24);
-            $jours_rest = floor($jours_rest);
+            date_default_timezone_set("Indian/Reunion");//On reprend le meme fuseau horaire
+            $timeFin = $date; //On recupere la date de fin enregistrée
+            $timeAct = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")); //On prend la date actuelle
+            $timeRemaining = $timeFin - $timeAct; //On fait la difference
+            //verification si termine
+            if($timeRemaining <= 0){ //Si c'est à 0 alors l'enchere est terminée
+                echo "TERMINE";
+            }else{
+                //conversion du temps restant
+                $min_rest = $timeRemaining / 60;
+                $heure_rest = $min_rest / 60;
+                $jours_rest = $heure_rest / 24;
+                $sec_rest = floor($timeRemaining % 60);
+                $min_rest = floor($min_rest % 60);
+                $heure_rest = floor($heure_rest % 24);
+                $jours_rest = floor($jours_rest);
 
-
-            echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
+                echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
+            }
+            
         }
     ?>
 
