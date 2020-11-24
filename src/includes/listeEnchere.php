@@ -1,6 +1,6 @@
 <?php include 'libs/functions.php'; ?>
 <?php //include 'scriptJs/timer.js'; ?>
-<?php header('refresh: 1'); ?>
+<?php //header('refresh: 1'); ?>
 <?php 
 //Ici on gere l'ajout du prix à augmenter
 
@@ -26,6 +26,11 @@
           <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="<?= $items['id']?>">
                 <?php calculDate($items['date_fin'])?>
+                <?php 
+                    // $timeAct = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
+                    // $dataToUpdate = myTimer($items['date_fin'], $timeAct);
+                    // conversion($dataToUpdate);
+                ?>
                 </div>
                     <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid" style="height:230px;" alt="...">
                     <div class="card-body">

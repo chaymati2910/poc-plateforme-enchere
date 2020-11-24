@@ -1,15 +1,7 @@
 <?php //include 'scriptJs/timer.js'; ?>
-<?php //header('refresh: 1'); <?php
-//     $prefix = (PHP_SHLIB_SUFFIX === 'dll') ? 'php_' : '';
-//     dl($prefix . 'ev.' . PHP_SHLIB_SUFFIX);
-// print_r(get_loaded_extensions());
-?>
+
 <?php 
-
 //Ici on gere la modification de l'état de l'enchere
-// $query_age = (isset($_POST['submit_activer']) ? $_POST['submit_activer'] : null);
-// var_dump($query_age);
-
 if(isset($_POST['submit_activer'])){
     $id = $_POST['indice'];
     foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
@@ -43,7 +35,7 @@ if(isset($_POST['submit_desactiver'])){
         <div class="card  shadow m-lg-4" style="width: 18rem;">
             <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
                 id="<?= $items['id']?>">
-                <?php calculDate($items['date_fin'])?>
+                <?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif'?>
             </div>
             <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid"
                 style="height:230px;" alt="...">
