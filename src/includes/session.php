@@ -12,7 +12,6 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'prix_clic' => 0.50,
             'augmentation_duree' => 30,
             'augmentation_prix' => 0.50,
-            'date_lancement' => 'XX',
             'image_upload' => 'image2.jpg',
             'date_fin' => 1606345200,
             'etat' => 'inactif'
