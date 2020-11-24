@@ -16,7 +16,7 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
         [
             'description' => 'Iphone X',
             'prix_lancement' => 1,
-            'duree' => 48,
+            'duree' => 36,
             'prix_clic' => 0.50,
             'augmentation_duree' => 30,
             'augmentation_prix' => 0.30,
