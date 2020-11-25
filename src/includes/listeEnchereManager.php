@@ -9,7 +9,7 @@ if(isset($_POST['submit_activer'])){
             if($items['etat'] != 'actif'){
                 $items['etat'] = 'actif';
                 $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-                $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
+                // $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
             }
         }
     }
