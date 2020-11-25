@@ -28,35 +28,38 @@ if(isset($_POST['submit_desactiver'])){
 ?>
 <div id="articles" class="container-fluid mt-5">
     <h2 class="text-center mb-5 font-weight-bold">ARTICLES AJOUTES</h2>
-    <div class=" d-flex justify-content-center flex-wrap">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="pl-5" scope="col">Image</th>
+                    <th scope="col">Decription</th>
+                    <th scope="col">Etat</th>
+                    <th scope="col">Prix</th>
+                    <th class="text-center" scope="col">Activer / Desactiver</th>
+                </tr>
+            </thead>
+            <tbody>
         <!--Boucle pour chaque items dans le tableau dans la variable session-->
 
-        <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
-        <div class="card  shadow m-lg-4" style="width: 18rem;">
-            <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
-                id="<?= $items['id']?>">
-                <?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif'?>
-            </div>
-            <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid"
-                style="height:230px;" alt="...">
-            <div class="card-body">
-
-                <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
-                <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
-                <p class="card-text m-0">Prix du clic : <?= $items['prix_clic'] ?> cts</p>
-                <p class="card-text mb-4">Prix de l'enchère : <?= $items['augmentation_prix'] ?> cts/clic</p>
-                <div class="text-center mb-4">
-
-                    <form method="POST" enctype="multipart/form-data">
-                        <input name="indice" value="<?= $items['id']?>" style="display:none;">
-                        <button class="btn btn-primary p-0 mb-4" name="submit_activer">Activer</button>
-                        <button class="btn btn-primary p-0" name="submit_desactiver">Desactiver</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <?php endforeach; ?>
-
-
+            <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
+                <tr>
+                    <td class="w-25">
+                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail" style="max-width: 200px; border: none;">
+                    </td>
+                    <td class="align-middle"><?= $items['description'] ?></td>
+                    <td class="align-middle"><?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif' ?></td>
+                    <td class="align-middle"><?= $items['prix_lancement'] ?> €</td>
+                    <td class="w-25 align-middle">
+                        <form method="POST" enctype="multipart/form-data">
+                            <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
+                            <button class="btn btn-primary p-0" name="submit_activer">Activer</button>
+                            <button class="btn btn-primary p-0" name="submit_desactiver">Desactiver</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 </div>
