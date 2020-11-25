@@ -111,6 +111,11 @@ if(isset($_POST['submit_desactiver'])){
                                 </label>
                             </div>
                         </form>
+                        <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire-->
+                        <form method="post" action="modificationenchere.php?id=<?=$items['id']?>"  class="d-flex justify-content-center">
+                                <input name="repere" value="<?=$items['id']?>" style="display:none;">
+                                <button class="btn btn-light  mt-2" type="submit" name="submit_modidier" value="1" class="btn btn-warning p-0 align-items-center" >Modifier</button>
+                        </form>
                     </td>
                 </tr>
             <?php endforeach; ?>
