@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <script>
-                    var end = <?= $items['date_fin']; ?>; // récupére la variable PHP
+                    var end = <?= $items['date_fin']; ?>; // récupére la donnée dans le tableau PHP
                     var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>;
                     var timer = setInterval(function countDown(){
                         var tempAct = new Date();
