@@ -72,16 +72,16 @@ if(isset($_POST['submit_desactiver'])){
                                 }
                                 echo $classActive;
                                 ?>" name="">
-                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold
+                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold" name="submit_activer" 
                                     <?php
-                                    $classActive = "";
+                                    $attrDisabled = "";
                                     if($items['etat'] == 'actif') {
-                                        $classActive = "active";
+                                        $attrDisabled = "disabled";
                                     } else {
-                                        $classActive = "";
+                                        $attrDisabled = "";
                                     }
-                                    echo $classActive;
-                                    ?>" name="submit_activer">Activer</button>
+                                    echo $attrDisabled;
+                                    ?>>Activer</button>
                                 </label>
                                 <label class="btn btn-secondary btn-manager w-50
                                 <?php //si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
@@ -93,16 +93,16 @@ if(isset($_POST['submit_desactiver'])){
                                 }
                                 echo $classActive;
                                 ?>" name="">
-                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold pr-4
+                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold pr-4" name="submit_desactiver"
                                     <?php
-                                    $classActive = "";
+                                    $attrDisabled = "";
                                     if($items['etat'] == 'inactif') {
-                                        $classActive = "active";
+                                        $attrDisabled = "disabled";
                                     } else {
-                                        $classActive = "";
+                                        $attrDisabled = "";
                                     }
-                                    echo $classActive;
-                                    ?>" name="submit_desactiver">Desactiver</button>
+                                    echo $attrDisabled;
+                                    ?>>Desactiver</button>
                                 </label>
                             </div>
                         </form>
