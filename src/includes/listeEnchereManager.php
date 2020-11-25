@@ -32,11 +32,15 @@ if(isset($_POST['submit_desactiver'])){
         <table class="table">
             <thead>
                 <tr>
-                    <th class="pl-5" scope="col">Image</th>
-                    <th scope="col">Decription</th>
-                    <th scope="col">Etat</th>
-                    <th scope="col">Prix</th>
-                    <th class="text-center" scope="col">Activer / Desactiver</th>
+                    <th class="align-middle text-center" scope="col">Image</th>
+                    <th class="align-middle text-center" scope="col">Decription</th>
+                    <th class="align-middle text-center" scope="col">Etat</th>
+                    <th class="align-middle text-center" scope="col">Prix de lancement</th>
+                    <th class="align-middle text-center" scope="col">Temps restant</th>
+                    <th class="align-middle text-center" scope="col">Prix du clic</th>
+                    <th class="align-middle text-center" scope="col">Augmentation du prix</th>
+                    <th class="align-middle text-center" scope="col">Augmentation durée</th>
+                    <th class="align-middle text-center" scope="col">Activer / Desactiver</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,17 +48,21 @@ if(isset($_POST['submit_desactiver'])){
 
             <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
                 <tr>
-                    <td class="w-25">
-                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail" style="max-width: 200px; border: none;">
+                    <td class="">
+                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail" style="max-width: 150px; border: none;">
                     </td>
-                    <td class="align-middle"><?= $items['description'] ?></td>
-                    <td class="align-middle"><?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif' ?></td>
-                    <td class="align-middle"><?= $items['prix_lancement'] ?> €</td>
-                    <td class="w-25 align-middle">
-                        <form method="POST" enctype="multipart/form-data">
-                            <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
-                            <button class="btn btn-primary p-0" name="submit_activer">Activer</button>
-                            <button class="btn btn-primary p-0" name="submit_desactiver">Desactiver</button>
+                    <td class="align-middle text-center"><?= $items['description'] ?></td>
+                    <td class="align-middle text-center"><?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif' ?></td>
+                    <td class="align-middle text-center"><?= $items['prix_lancement'] ?> €</td>
+                    <td class="align-middle text-center"><?= calculDate($items['date_fin']) ?></td>
+                    <td class="align-middle text-center"><?= $items['prix_clic'] ?></td>
+                    <td class="align-middle text-center"><?= $items['augmentation_prix'] ?></td>
+                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?></td>
+                    <td class="align-middle text-center">
+                        <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?>">
+                            <input name="indice" id="<?= $items['id'] ?>" value="<?= $items['id'] ?>" style="display: none;">
+                            <button class="btn btn-primary p-0 mb-2 mt-0" name="submit_activer">Activer</button>
+                            <button class="btn btn-primary p-0 mt-0" name="submit_desactiver">Desactiver</button>
                         </form>
                     </td>
                 </tr>
