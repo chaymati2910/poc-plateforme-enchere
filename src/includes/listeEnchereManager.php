@@ -64,7 +64,7 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['augmentation_prix'] ?> €</td>
                     <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> secs</td>
                     <td class="align-middle text-center">
-                        <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?>">
+                        <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?> ">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-secondary btn-manager w-50
@@ -110,15 +110,19 @@ if(isset($_POST['submit_desactiver'])){
                                     ?>>Desactiver</button>
                                 </label>
                             </div>
+                        <!--Gestion_des_modifications_apporter_aux_enchères_david-->
+
+                        
+                                
                         </form>
-                        <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire-->
-                        <form method="post" action="modificationenchere.php?id=<?=$items['id']?>"  class="d-flex justify-content-center">
+                        <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire_david-->
+                        <form method="POST" action="modificationenchere.php?id=<?=$items['id']?>"  class="d-flex justify-content-center">
                                 <input name="repere" value="<?=$items['id']?>" style="display:none;">
-                                <button class="btn btn-light  mt-2" type="submit" name="submit_modidier" value="1" class="btn btn-warning p-0 align-items-center" >Modifier</button>
+                                <button class="btn btn-light  mt-2" type="submit" name="submit_parametre" value="1" class="btn btn-warning p-0 align-items-center" >Modifier</button>
                         </form>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+            <?php endforeach ?>
             </tbody>
         </table>
     </div>

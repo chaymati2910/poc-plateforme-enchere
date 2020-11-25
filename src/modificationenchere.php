@@ -27,7 +27,7 @@
 
 
 <?php if(isset($_POST['submit_parametre'])):?>
-    <?php ModificationParametre()?> <!---->
+   <!---->
 <?php endif ?>
 
 <!--Pour chaque éléments items, on récupère les variables à réaffecter -->   
@@ -69,13 +69,13 @@
         <input type="number" class="form-control" aria-label="augmentation_duree" placeholder="En secondes" name="augmentation_duree" value="<?= $items['augmentation_duree']?>" required id="augmentation_duree" min="0" aria-describedby="basic-addon1">
     </div>
     <div class="d-flex justify-content-center align-items-center">
-        <button type="submit_parametre" name="submit_parametre" class="btn btn-warning text-uppercase text-white font-weight-bold btnAjoutEnchere mb-5" style="width:220px;">MODIFIER</button>
+        <button type="submit_parametre" name="submit_parametre" class="btn btn-warning text-uppercase text-white font-weight-bold btn AjoutEnchere mb-5" style="width:220px; height:65px;">Enregistrer modification</button>
     </div>
 </form>
 
 <?php endif ?>
 
-<?php endforeach ?>
+        <?php endforeach ?>
 
     
 </body>
