@@ -41,7 +41,7 @@
                         <div class="text-center">
                         <form method="POST" action="#<?= $items['id']?>">
                             <input name="indice" value="<?= $items['id']?>" style="display:none;">
-                            <button class="btn btn-primary p-0" name="submit">Enchérir</button>
+                            <button class="btn btn-primary btn-listEnchere p-0" name="submit">Enchérir</button>
                         </form>
                         </div>
                     </div>

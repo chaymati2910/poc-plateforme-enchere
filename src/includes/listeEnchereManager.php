@@ -60,9 +60,17 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['augmentation_duree'] ?></td>
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?>">
-                            <input name="indice" id="<?= $items['id'] ?>" value="<?= $items['id'] ?>" style="display: none;">
-                            <button class="btn btn-primary p-0 mb-2 mt-0" name="submit_activer">Activer</button>
-                            <button class="btn btn-primary p-0 mt-0" name="submit_desactiver">Desactiver</button>
+                            <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
+                            <!-- <button class="btn btn-primary p-0 mb-2 mt-0" name="submit_activer">Activer</button>
+                            <button class="btn btn-primary p-0 mt-0" name="submit_desactiver">Desactiver</button> -->
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary btn-manager active">
+                                    <input type="radio" name="options" id="option1" checked> Activer
+                                </label>
+                                <label class="btn btn-secondary btn-manager">
+                                    <input type="radio" name="options" id="option2"> Desactiver
+                                </label>
+                            </div>
                         </form>
                     </td>
                 </tr>
