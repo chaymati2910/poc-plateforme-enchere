@@ -48,7 +48,7 @@ if(isset($_POST['submit_desactiver'])){
 
             <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
                 <tr>
-                    <td class="">
+                    <td id="<?= $items['id'] ?>" class="">
                         <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail" style="max-width: 150px; border: none;">
                     </td>
                     <td class="align-middle text-center"><?= $items['description'] ?></td>
