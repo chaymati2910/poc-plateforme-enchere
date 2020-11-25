@@ -64,11 +64,29 @@ if(isset($_POST['submit_desactiver'])){
                             <!-- <button class="btn btn-primary p-0 mb-2 mt-0" name="submit_activer">Activer</button>
                             <button class="btn btn-primary p-0 mt-0" name="submit_desactiver">Desactiver</button> -->
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary btn-manager active" name="">
+                                <label class="btn btn-secondary btn-manager 
+                                <?php //si l'état de l'article est 'actif', on ajoute la class 'active' au bouton
+                                $class = "";
+                                if($items['etat'] == 'actif') {
+                                    $class = "active";
+                                } else {
+                                    $class = "";
+                                }
+                                echo $class;
+                                ?>" name="">
                                     <button id="option1" class="bg-transparent border-0 text-white font-weight-bold" name="submit_activer">Activer</button>
                                     <!-- <input type="radio" name="submit_activer" id="option1" checked> Activer -->
                                 </label>
-                                <label class="btn btn-secondary btn-manager" name="">
+                                <label class="btn btn-secondary btn-manager
+                                <?php //si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
+                                $class = "";
+                                if($items['etat'] == 'inactif') {
+                                    $class = "active";
+                                } else {
+                                    $class = "";
+                                }
+                                echo $class;
+                                ?>" name="">
                                     <button id="option2" class="bg-transparent border-0 text-white font-weight-bold" name="submit_desactiver">Desactiver</button>
                                     <!-- <input type="radio" name="submit_desactiver" id="option2"> Desactiver -->
                                 </label>

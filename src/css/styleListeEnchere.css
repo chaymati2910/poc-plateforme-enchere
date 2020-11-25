@@ -47,10 +47,10 @@ html, body{
     border-color: #81C784 !important; 
 }
 
-.btn-manager:active {
+/* .btn-manager:active {
     background-color: #81C784 !important;
     border-color: #81C784 !important;
-}
+} */
 
 /******** MEDIA QUERIES ********/
 
