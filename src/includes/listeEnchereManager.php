@@ -4,9 +4,14 @@
 //Ici on gere la modification de l'état de l'enchere
 if(isset($_POST['submit_activer'])){
     $id = $_POST['indice'];
+    
     foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
         if($items['id'] == $id){
             if($items['etat'] != 'actif'){
+                // $timeTo = $items['duree'];
+                $timeTO = (int)$items['duree'];
+                date_default_timezone_set("Indian/Reunion");
+                $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
                 $items['etat'] = 'actif';
                 $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
                 // $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
@@ -36,7 +41,7 @@ if(isset($_POST['submit_desactiver'])){
                     <th class="align-middle text-center" scope="col">Decription</th>
                     <th class="align-middle text-center" scope="col">Etat</th>
                     <th class="align-middle text-center" scope="col">Prix de lancement</th>
-                    <th class="align-middle text-center" scope="col">Temps restant</th>
+                    <th class="align-middle text-center" scope="col">Durée de l'enchère</th>
                     <th class="align-middle text-center" scope="col">Prix du clic</th>
                     <th class="align-middle text-center" scope="col">Augmentation du prix</th>
                     <th class="align-middle text-center" scope="col">Augmentation durée</th>
@@ -54,10 +59,10 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['description'] ?></td>
                     <td class="align-middle text-center"><?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif' ?></td>
                     <td class="align-middle text-center"><?= $items['prix_lancement'] ?> €</td>
-                    <td class="align-middle text-center"><?= calculDate($items['date_fin']) ?></td>
-                    <td class="align-middle text-center"><?= $items['prix_clic'] ?></td>
-                    <td class="align-middle text-center"><?= $items['augmentation_prix'] ?></td>
-                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?></td>
+                    <td class="align-middle text-center"><?= $items['duree']?> h</td>
+                    <td class="align-middle text-center"><?= $items['prix_clic'] ?> €</td>
+                    <td class="align-middle text-center"><?= $items['augmentation_prix'] ?> €</td>
+                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> secs</td>
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?>">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
