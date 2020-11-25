@@ -42,6 +42,11 @@ html, body{
     background-color: #81C784;
 }
 
+.btn-manager.active {
+    background-color: #81C784 !important;
+    border-color: #81C784 !important; 
+}
+
 .btn-manager:active {
     background-color: #81C784 !important;
     border-color: #81C784 !important;
