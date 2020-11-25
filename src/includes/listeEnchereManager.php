@@ -26,37 +26,58 @@ if(isset($_POST['submit_desactiver'])){
     }
 }
 ?>
-<div id="articles" class="container-fluid mt-5">
-    <h2 class="text-center mb-5 font-weight-bold">ARTICLES AJOUTES</h2>
-    <div class=" d-flex justify-content-center flex-wrap">
+
+
+<div class="d-flex justify-content-center">
+        <h2 class="mb-5 text-uppercase font-weight-bold">Enchère Ajoutée</h2>
+    </div>
+<div class="d-flex justify-content-center">
+
+
+
+<div  class=" col-9 border border-success pt-3 pb-3 mb-5 bg-light text-dark">
         <!--Boucle pour chaque items dans le tableau dans la variable session-->
 
-        <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
-        <div class="card  shadow m-lg-4" style="width: 18rem;">
-            <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
-                id="<?= $items['id']?>">
-                <?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif'?>
-            </div>
-            <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid"
-                style="height:230px;" alt="...">
-            <div class="card-body">
+                    <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
+                    
 
-                <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
-                <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
-                <p class="card-text m-0">Prix du clic : <?= $items['prix_clic'] ?> cts</p>
-                <p class="card-text mb-4">Prix de l'enchère : <?= $items['augmentation_prix'] ?> cts/clic</p>
-                <div class="text-center mb-4">
 
-                    <form method="POST" enctype="multipart/form-data">
-                        <input name="indice" value="<?= $items['id']?>" style="display:none;">
-                        <button class="btn btn-primary p-0 mb-4" name="submit_activer">Activer</button>
-                        <button class="btn btn-primary p-0" name="submit_desactiver">Desactiver</button>
-                    </form>
+                    
+                            <!-- id="<?= $items['id']?>"> -->
+                            <!-- <?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif'?>  -->
+                        
+
+                <div class="row d-flex justify-content-center p-2">
+
+                    <div class=" col d-flex  mb-3 ">  
+                            <img src="../ressources/img/<?= $items['image_upload'] ?>" style="height:80px; width:120px" alt="...">
+
+                                <!--bouton d'activation ou de desactivation-->
+                                        
+                    </div>
+
+                     <div class=" col-7 row mt-3">
+                            <div class=" column col  " ><?= $items['description'] ?></div>
+                            <div class="row col "><?= $items['prix_lancement'] ?> €</div>
+                            <div class="row col "><?= $items['prix_clic'] ?> cts</div>
+                            <div class="row col "> <?= $items['augmentation_prix'] ?> cts/clic</div> 
+                    </div>
+
+                    <div  class="ml-5 mt-3">
+                                <form method="POST" enctype="multipart/form-data">
+                                    <input name="indice" value="<?= $items['id']?>" style="display:none;">
+                                    <button class="btn btn btn-warning p-0 " name="submit_activer">Activer</button>
+                                    <button class="btn btn-warning p-0" name="submit_desactiver">Desactiver</button>
+                                </form>
+
+                                <div><p>Temps:&nbsp&nbsp<?= $items['duree'] ?>H</p></div>
+                            </div>    
+                    
+                    </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
-        </div>
-        <?php endforeach; ?>
-
-
-    </div>
 </div>
+
+   
+
+

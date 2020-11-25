@@ -51,12 +51,12 @@
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
                 $_POST['image_upload'] = $idName . "." . $fileExt;
 
-                //Attribuer un id à l'item
+                //Attribuer un id à l'itemgit 
                 $idEnchere = md5(uniqid(rand(), true)); 
                 $_POST['id'] = $idEnchere;
                 
                 //Attribution de l'etat actif ou inactif
-                $_POST['etat'] = 'actif';
+                $_POST['etat'] = 'inactif';
 
                 //Gestion de la date de fin => on prend la date actuelle lors de l'ajout puis on ajoute le nombre d'heures que l'utilisateur souhaite
                 $timeTO = (int)$_POST['duree'];
