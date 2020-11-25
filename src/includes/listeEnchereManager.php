@@ -61,10 +61,8 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?>">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
-                            <!-- <button class="btn btn-primary p-0 mb-2 mt-0" name="submit_activer">Activer</button>
-                            <button class="btn btn-primary p-0 mt-0" name="submit_desactiver">Desactiver</button> -->
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary btn-manager 
+                                <label class="btn btn-secondary btn-manager w-50
                                 <?php //si l'état de l'article est 'actif', on ajoute la class 'active' au bouton
                                 $classActive = "";
                                 if($items['etat'] == 'actif') {
@@ -84,9 +82,8 @@ if(isset($_POST['submit_desactiver'])){
                                     }
                                     echo $classActive;
                                     ?>" name="submit_activer">Activer</button>
-                                    <!-- <input type="radio" name="submit_activer" id="option1" checked> Activer -->
                                 </label>
-                                <label class="btn btn-secondary btn-manager
+                                <label class="btn btn-secondary btn-manager w-50
                                 <?php //si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
                                 $classActive = "";
                                 if($items['etat'] == 'inactif') {
@@ -96,7 +93,7 @@ if(isset($_POST['submit_desactiver'])){
                                 }
                                 echo $classActive;
                                 ?>" name="">
-                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold
+                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold pr-4
                                     <?php
                                     $classActive = "";
                                     if($items['etat'] == 'inactif') {
@@ -106,7 +103,6 @@ if(isset($_POST['submit_desactiver'])){
                                     }
                                     echo $classActive;
                                     ?>" name="submit_desactiver">Desactiver</button>
-                                    <!-- <input type="radio" name="submit_desactiver" id="option2"> Desactiver -->
                                 </label>
                             </div>
                         </form>
