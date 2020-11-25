@@ -66,28 +66,46 @@ if(isset($_POST['submit_desactiver'])){
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-secondary btn-manager 
                                 <?php //si l'état de l'article est 'actif', on ajoute la class 'active' au bouton
-                                $class = "";
+                                $classActive = "";
                                 if($items['etat'] == 'actif') {
-                                    $class = "active";
+                                    $classActive = "active";
                                 } else {
-                                    $class = "";
+                                    $classActive = "";
                                 }
-                                echo $class;
+                                echo $classActive;
                                 ?>" name="">
-                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold" name="submit_activer">Activer</button>
+                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold
+                                    <?php
+                                    $classActive = "";
+                                    if($items['etat'] == 'actif') {
+                                        $classActive = "active";
+                                    } else {
+                                        $classActive = "";
+                                    }
+                                    echo $classActive;
+                                    ?>" name="submit_activer">Activer</button>
                                     <!-- <input type="radio" name="submit_activer" id="option1" checked> Activer -->
                                 </label>
                                 <label class="btn btn-secondary btn-manager
                                 <?php //si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
-                                $class = "";
+                                $classActive = "";
                                 if($items['etat'] == 'inactif') {
-                                    $class = "active";
+                                    $classActive = "active";
                                 } else {
-                                    $class = "";
+                                    $classActive = "";
                                 }
-                                echo $class;
+                                echo $classActive;
                                 ?>" name="">
-                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold" name="submit_desactiver">Desactiver</button>
+                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold
+                                    <?php
+                                    $classActive = "";
+                                    if($items['etat'] == 'inactif') {
+                                        $classActive = "active";
+                                    } else {
+                                        $classActive = "";
+                                    }
+                                    echo $classActive;
+                                    ?>" name="submit_desactiver">Desactiver</button>
                                     <!-- <input type="radio" name="submit_desactiver" id="option2"> Desactiver -->
                                 </label>
                             </div>
