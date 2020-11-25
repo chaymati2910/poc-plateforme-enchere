@@ -104,6 +104,15 @@
                 $jours_rest = floor($jours_rest);
 
                 echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
+                // echo "<script>
+                //     setInterval(countDown(), 1000); // répéte la fonction toutes les 1 seconde
+
+                //     function countDown() {
+                        
+
+                //     }
+
+                //     </script>";
             }
             
         }
@@ -125,4 +134,5 @@
         }
     ?>
 
+  
 

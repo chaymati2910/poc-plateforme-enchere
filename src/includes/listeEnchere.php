@@ -25,19 +25,14 @@
         <?php if($items['etat'] == "actif"):?>
           <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold" id="<?= $items['id']?>">
-                <?php calculDate($items['date_fin'])?>
-                <?php 
-                    // $timeAct = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
-                    // $dataToUpdate = myTimer($items['date_fin'], $timeAct);
-                    // conversion($dataToUpdate);
-                ?>
+                <?php //calculDate($items['date_fin'])?>                
                 </div>
                     <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid" style="height:230px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
                         <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
                         <p class="card-text m-0">Prix du clic : <?= $items['prix_clic'] ?> cts</p>
-                        <p class="card-text mb-4">Enchère : +<?= $items['augmentation_prix'] ?> cts/clic</p>
+                        <p class="card-text mb-4">Prix de l'enchère : <?= $items['augmentation_prix'] ?> cts/clic</p>
                         <div class="text-center">
                         <form method="POST" action="#<?= $items['id']?>">
                             <input name="indice" value="<?= $items['id']?>" style="display:none;">
@@ -46,9 +41,22 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    var end = <?= $items['date_fin']; ?>; // récupére la variable PHP
+                    var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>;
+                    var timer = setInterval(function countDown(){
+                        var tempAct = new Date();
+                        var heure = Math.floor(tempAct.getTime() / 1000);
+                        var timeRemaining = <?php echo $items['date_fin']?> - heure;
+                        var daysRemaining = parseInt(timeRemaining); // conversion en jours
+                        var hoursRemaining = parseInt(timeRemaining / 3600); // conversion en heures
+                        var minutesRemaining = parseInt((timeRemaining % 3600) / 60); // conversion en minutes
+                        var secondsRemaining = parseInt((timeRemaining % 3600) % 60); // conversion en secondes
+                        document.getElementById('<?= $items['id'] ?>').innerHTML = hoursRemaining + ' h : ' + minutesRemaining + ' m : ' + secondsRemaining + ' s ';
+                    }, 1000); // répéte la fonction toutes les 1 seconde
+                </script>
         <?php endif; ?>
         <?php endforeach; ?>
-
-
     </div>
 </div>
+

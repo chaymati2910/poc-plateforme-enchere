@@ -1,47 +1,32 @@
-    <?php 
-   
-    $tempVar = $_SESSION['DUMMY_ARRAY'];
+<script>
+    <?php
+      foreach ($_SESSION['DUMMY_ARRAY'] as $key => $items): 
+    ?>
+    var end = <?= $items['date_fin']; ?>; // récupére la variable PHP
 
-  ?>
-    <script>
-    // function gestTimer() {
-// Fixez la date à laquelle nous comptons
-<?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items):?>
-    var countDownDate = new Date(); //.getTime()
-    
-    // Fixez la durée de l'enchère
-    var clickAuction = <?php echo $_SESSION['DUMMY_ARRAY'][$key]['duree']?>;
-    countDownDate.setHours(countDownDate.getHours() + clickAuction);
-    console.log(clickAuction);
+    var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>;
+    console.log ("END", end);
+    console.log("date:secondes", dateConvert);
 
-    // Mettez à jour le compte à rebours toutes les 1 seconde
-    var maFonction = setInterval(function() {
+    var <?php echo $items['timer']?> = setInterval(countDown(), 1000); // répéte la fonction toutes les 1 seconde
 
-      // Obtenir la date et l'heure du jour
-      var now = new Date(); //.getTime()
+    function countDown() {
 
-      // Trouvez la distance entre maintenant et la date du compte à rebours
-      var timeRemaning = countDownDate - now;
+        var timeRemaining = end - dateConvert;
+        var daysRemaining = parseInt(timeRemaining); // conversion en jours
+        var hoursRemaining = parseInt(timeRemaining / 3600); // conversion en heures
+        var minutesRemaining = parseInt((timeRemaining % 3600) / 60); // conversion en minutes
+        var secondsRemaining = parseInt((timeRemaining % 3600) % 60); // conversion en secondes
 
-      // Calculs de temps pour les jours, heures, minutes et secondes
-      var days = Math.floor(timeRemaning / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((timeRemaning % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((timeRemaning % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timeRemaning % (1000 * 60)) / 1000);
-      
-      // Afficher le résultat dans l'élément avec id = "demo"
-      document.getElementById("<?= $key ?>").innerHTML = hours + "h : "
-      + minutes + "m : " + seconds + "s ";
+        // Affiche le timer
+        document.getElementById('<?= $items['id'] ?>').innerHTML = hoursRemaining + ' h : ' + minutesRemaining + ' m : ' + secondsRemaining + ' s ';
 
+        // condition quand le timer est fini
+        if ((hoursRemaining == 0 && minutesRemaining == 0 && secondsRemaining == 0)) {
+            clearInterval(<?php echo $items['timer']?>);
+            document.getElementById('<?= $items['id'] ?>').innerHTML = "expiré";
+        }
 
-      // Si le compte à rebours est terminé, écrivez du texte
-      if (timeRemaning < 0) {
-        clearInterval(maFonction);
-        document.getElementById("demo").innerHTML = "EXPIRÉ";
-      }
-
-    }, 1000);
-    // }
-    <?php endforeach?>
+    }
+    <?php endforeach; ?>
     </script>
-  
