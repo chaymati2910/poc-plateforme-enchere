@@ -56,7 +56,7 @@
                 $_POST['id'] = $idEnchere;
                 
                 //Attribution de l'etat actif ou inactif
-                $_POST['etat'] = 'actif';
+                $_POST['etat'] = 'inactif';
 
                 //Gestion de la date de fin => on prend la date actuelle lors de l'ajout puis on ajoute le nombre d'heures que l'utilisateur souhaite
                 $timeTO = (int)$_POST['duree'];
