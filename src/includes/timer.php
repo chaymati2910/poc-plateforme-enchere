@@ -8,11 +8,11 @@
 // Fixez la date à laquelle nous comptons
 <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items):?>
     var countDownDate = new Date(); //.getTime()
-    console.log(countDownDate);
+    
     // Fixez la durée de l'enchère
     var clickAuction = <?php echo $_SESSION['DUMMY_ARRAY'][$key]['duree']?>;
     countDownDate.setHours(countDownDate.getHours() + clickAuction);
-    console.log(countDownDate);
+    console.log(clickAuction);
 
     // Mettez à jour le compte à rebours toutes les 1 seconde
     var maFonction = setInterval(function() {
