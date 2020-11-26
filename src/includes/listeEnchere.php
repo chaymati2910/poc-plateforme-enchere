@@ -35,7 +35,7 @@
                     <div class="text-center">
                         <form method="POST" action="#<?= $items['id']?>">
                             <input name="indice" value="<?= $items['id']?>" style="display:none;">
-                            <button class="btn btn-primary btn-listEnchere p-0" name="submit">Enchérir</button>
+                            <button id="_<?= $items['id'] ?>" class="btn btn-primary btn-listEnchere p-0" name="submit">Enchérir</button>
                         </form>
                     </div>
                 </div>
@@ -44,6 +44,7 @@
             <script>
                 var end = <?= $items['date_fin']; ?>; // récupére la donnée dans le tableau PHP USELESS
                 var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>; //USELESS
+                //var btn = document.getElementsByClassName('btn-listEnchere');
                 var timer = setInterval(function countDown() {
                     var tempAct = new Date();
                     var heure = Math.floor(tempAct.getTime() / 1000);
@@ -56,6 +57,7 @@
                     document.getElementById('<?= $items['id'] ?>').innerHTML = hoursRemaining + ' h : ' + minutesRemaining + ' m : ' + secondsRemaining + ' s ';
                     if (timeRemaining <= 0) {
                         document.getElementById('<?= $items['id'] ?>').innerHTML = "EXPIRE";
+                        document.getElementById('_<?= $items['id'] ?>').setAttribute('disabled', ''); // Bouton disabled quand temps expiré
                     }
                 }, 1000); // répéte la fonction toutes les 1 seconde
             </script>
