@@ -32,7 +32,7 @@ html, body{
 .btn-listEnchere2 {
     font-weight: bold;
     text-transform: uppercase;
-    background-color: #FF9800;
+    background-color: #FF9800!important;
     border: none;
     width: 160px;
     height: 35px;
