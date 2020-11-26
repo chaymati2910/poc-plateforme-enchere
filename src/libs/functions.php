@@ -15,7 +15,7 @@
         if($validationForms === false){
             echo '
                 <div class="col-6 d-flex justify-content-center>    
-            <div class="alert alert-danger">Veuillez remplir tous les champs demandés!</div></div>';
+                <div class="alert alert-danger">Veuillez remplir tous les champs demandés!</div></div>';
             
         }else{
 
@@ -51,7 +51,7 @@
                 $fileName = "../ressources/img/" . $idName . "." . $fileExt;
                 $_POST['image_upload'] = $idName . "." . $fileExt;
 
-                //Attribuer un id à l'item
+                //Attribuer un id à l'itemgit 
                 $idEnchere = md5(uniqid(rand(), true)); 
                 $_POST['id'] = $idEnchere;
                 
@@ -125,4 +125,5 @@
         }
     ?>
 
+  
 
