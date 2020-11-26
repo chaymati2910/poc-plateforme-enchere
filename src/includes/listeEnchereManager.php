@@ -1,6 +1,5 @@
-<?php //include 'scriptJs/timer.js'; ?>
-
 <?php 
+
 //Ici on gere la modification de l'état de l'enchere
 if(isset($_POST['submit_activer'])){
     $id = $_POST['indice'];
@@ -8,13 +7,11 @@ if(isset($_POST['submit_activer'])){
     foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
         if($items['id'] == $id){
             if($items['etat'] != 'actif'){
-                // $timeTo = $items['duree'];
                 $timeTO = (int)$items['duree'];
                 date_default_timezone_set("Indian/Reunion");
                 $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
                 $items['etat'] = 'actif';
                 $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-                // $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
             }
         }
     }
@@ -31,6 +28,7 @@ if(isset($_POST['submit_desactiver'])){
     }
 }
 ?>
+
 <div id="articles" class="container-fluid mt-5">
     <h2 class="text-center mb-5 font-weight-bold">ARTICLES AJOUTES</h2>
     <div class="table-responsive">
@@ -49,12 +47,13 @@ if(isset($_POST['submit_desactiver'])){
                 </tr>
             </thead>
             <tbody>
-        <!--Boucle pour chaque items dans le tableau dans la variable session-->
 
+            <!--Boucle pour chaque items dans le tableau dans la variable session-->
             <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
                 <tr>
                     <td id="<?= $items['id'] ?>" class="">
-                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail" style="max-width: 150px; border: none;">
+                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail"
+                            style="max-width: 150px; border: none;">
                     </td>
                     <td class="align-middle text-center"><?= $items['description'] ?></td>
                     <td class="align-middle text-center"><?= $items['etat'] == 'actif' ? 'Actif' : 'Inactif' ?></td>
@@ -68,7 +67,7 @@ if(isset($_POST['submit_desactiver'])){
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-secondary btn-manager w-50
-                                <?php //si l'état de l'article est 'actif', on ajoute la class 'active' au bouton
+                                <?php // Si l'état de l'article est 'actif', on ajoute la class 'active' au bouton
                                 $classActive = "";
                                 if($items['etat'] == 'actif') {
                                     $classActive = "active";
@@ -77,8 +76,9 @@ if(isset($_POST['submit_desactiver'])){
                                 }
                                 echo $classActive;
                                 ?>" name="">
-                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold" name="submit_activer" 
-                                    <?php
+                                    <button id="option1" class="bg-transparent border-0 text-white font-weight-bold" 
+                                    name="submit_activer" 
+                                    <?php // Si l'état de l'article est 'actif', on ajoute l'attribut 'disabled' au bouton
                                     $attrDisabled = "";
                                     if($items['etat'] == 'actif') {
                                         $attrDisabled = "disabled";
@@ -89,7 +89,7 @@ if(isset($_POST['submit_desactiver'])){
                                     ?>>Activer</button>
                                 </label>
                                 <label class="btn btn-secondary btn-manager w-50
-                                <?php //si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
+                                <?php // Si l'état de l'article est 'inactif', on ajoute la class 'active' au bouton
                                 $classActive = "";
                                 if($items['etat'] == 'inactif') {
                                     $classActive = "active";
@@ -98,8 +98,9 @@ if(isset($_POST['submit_desactiver'])){
                                 }
                                 echo $classActive;
                                 ?>" name="">
-                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold pr-4" name="submit_desactiver"
-                                    <?php
+                                    <button id="option2" class="bg-transparent border-0 text-white font-weight-bold pr-4" 
+                                    name="submit_desactiver"
+                                    <?php // Si l'état de l'article est 'inactif', on ajoute l'attribut 'disabled' au bouton
                                     $attrDisabled = "";
                                     if($items['etat'] == 'inactif') {
                                         $attrDisabled = "disabled";
@@ -109,16 +110,14 @@ if(isset($_POST['submit_desactiver'])){
                                     echo $attrDisabled;
                                     ?>>Desactiver</button>
                                 </label>
-                            </div>
-                        <!--Gestion_des_modifications_apporter_aux_enchères_david-->
-
-                        
-                                
+                            </div> 
                         </form>
+                        <!--Gestion_des_modifications_apporter_aux_enchères_david-->
                         <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire_david-->
-                        <form method="POST" action="modificationenchere.php?id=<?=$items['id']?>"  class="d-flex justify-content-center">
-                                <input name="repere" value="<?=$items['id']?>" style="display:none;">
-                                <button class="btn btn-light  mt-2" type="submit" name="submit_parametre" value="1" class="btn btn-warning p-0 align-items-center" >Modifier</button>
+                        <form method="POST" action="modificationenchere.php?id=<?=$items['id']?>" class="d-flex justify-content-center">
+                            <input name="repere" value="<?=$items['id']?>" style="display:none;">
+                            <button class="btn btn-light  mt-2" type="submit" name="submit_parametre" value="1"
+                                class="btn btn-warning p-0 align-items-center">Modifier</button>
                         </form>
                     </td>
                 </tr>
