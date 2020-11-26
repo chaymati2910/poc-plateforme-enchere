@@ -9,7 +9,6 @@ html, body{
 
 .duree {
     background: #FF9800;
-    /* opacity: .8; */
     height: 10%;
     font-size: 1rem;
     color: white;
@@ -51,11 +50,6 @@ html, body{
 .active {
     cursor: default !important;
 }
-
-/* .btn-manager:active {
-    background-color: #81C784 !important;
-    border-color: #81C784 !important;
-} */
 
 /******** MEDIA QUERIES ********/
 
