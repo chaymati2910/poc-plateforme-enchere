@@ -15,7 +15,7 @@
         if($validationForms === false){
             echo '
                 <div class="col-6 d-flex justify-content-center>    
-            <div class="alert alert-danger">Veuillez remplir tous les champs demandés!</div></div>';
+                <div class="alert alert-danger">Veuillez remplir tous les champs demandés!</div></div>';
             
         }else{
 
@@ -104,15 +104,6 @@
                 $jours_rest = floor($jours_rest);
 
                 echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
-                // echo "<script>
-                //     setInterval(countDown(), 1000); // répéte la fonction toutes les 1 seconde
-
-                //     function countDown() {
-                        
-
-                //     }
-
-                //     </script>";
             }
             
         }
