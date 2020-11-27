@@ -37,6 +37,8 @@
                 $_SESSION['DUMMY_ARRAY'][$key]['prix_clic'] = $_POST['prix_clic'];
                 $_SESSION['DUMMY_ARRAY'][$key]['augmentation_duree'] = $_POST['augmentation_duree'];
                 $_SESSION['DUMMY_ARRAY'][$key]['augmentation_prix'] = $_POST['augmentation_prix'];
+     
+
             }
         }
    ?>
@@ -55,8 +57,8 @@
     </div>
     <div class="d-flex justify-content-center align-items-center">
     <label class="fileUpload d-flex justify-content-center align-items-center bg-light">
-        Image upload
-        <input type="file" value="<?=$items['image_upload']?>" name="image_upload" >
+        Image upload <!---->
+        <input type="file" value="<?=$items['image_upload']?>" name="image_upload" id="image_upload" >
 
     </label>
 </div>

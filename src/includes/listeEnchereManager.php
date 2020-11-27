@@ -49,7 +49,7 @@ if(isset($_POST['submit_desactiver'])){
             <tbody>
 
             <!--Boucle pour chaque items dans le tableau dans la variable session-->
-            <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
+            <?php foreach(array_reverse($_SESSION['DUMMY_ARRAY']) as $items) :?>
                 <tr>
                     <td id="<?= $items['id'] ?>" class="">
                         <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail"
@@ -61,7 +61,7 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['duree']?> h</td>
                     <td class="align-middle text-center"><?= $items['prix_clic'] ?> €</td>
                     <td class="align-middle text-center"><?= $items['augmentation_prix'] ?> €</td>
-                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> secs</td>
+                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> sec</td>
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?> ">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
