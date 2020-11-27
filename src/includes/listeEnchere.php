@@ -35,7 +35,7 @@
             }
         ?>
 
-        <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
+        <?php foreach(array_reverse($_SESSION['DUMMY_ARRAY']) as $key => $items) :?>
         
         <?php if($items['etat'] == "actif"):?>
             <div class="card  shadow m-lg-4" style="width: 18rem;">
