@@ -19,9 +19,11 @@
     <div class=" d-flex justify-content-center flex-wrap">
 
         <!--Boucle pour chaque items dans le tableau dans la variable session-->
-
-        <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
-        
+        <?php //$dummyArray = $_SESSION['DUMMY_ARRAY'];
+           // $ordreDummyArray = array_reverse($dummyArray);
+        ?>
+        <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?> 
+                
         <?php if($items['etat'] == "actif"):?>
             <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
