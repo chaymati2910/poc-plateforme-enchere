@@ -14,7 +14,8 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'augmentation_prix' => 0.50,
             'image_upload' => 'None.png',
             'date_fin' => 1606345200,
-            'etat' => 'inactif'
+            'etat' => 'inactif',
+            'gain' => 0
         ],
         [
             'id' => 2,
@@ -26,7 +27,8 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'augmentation_prix' => 0.30,
             'image_upload' => 'None.png',
             'date_fin' => 1606345800,
-            'etat' => 'actif'
+            'etat' => 'actif',
+            'gain' => 0
         ],
         [
             'id' => 3,
@@ -38,7 +40,8 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'augmentation_prix' => 0.20,
             'image_upload' => 'None.png',
             'date_fin' => 1606345200,
-            'etat' => 'actif'
+            'etat' => 'actif',
+            'gain' => 0
         ],
         ];
 }
