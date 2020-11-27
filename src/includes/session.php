@@ -12,7 +12,7 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'prix_clic' => 0.50,
             'augmentation_duree' => 30,
             'augmentation_prix' => 0.50,
-            'image_upload' => 'image2.jpg',
+            'image_upload' => 'None.png',
             'date_fin' => 1606345200,
             'etat' => 'inactif'
         ],
@@ -24,7 +24,7 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'prix_clic' => 0.50,
             'augmentation_duree' => 30,
             'augmentation_prix' => 0.30,
-            'image_upload' => 'moran-8cMPxOqkLE8-unsplash.jpg',
+            'image_upload' => 'None.png',
             'date_fin' => 1606345800,
             'etat' => 'actif'
         ],
@@ -36,7 +36,7 @@ if(!isset($_SESSION['DUMMY_ARRAY'])){
             'prix_clic' => 0.50,
             'augmentation_duree' => 30,
             'augmentation_prix' => 0.20,
-            'image_upload' => 'image2.jpg',
+            'image_upload' => 'None.png',
             'date_fin' => 1606345200,
             'etat' => 'actif'
         ],

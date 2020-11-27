@@ -37,6 +37,8 @@
                 $_SESSION['DUMMY_ARRAY'][$key]['prix_clic'] = $_POST['prix_clic'];
                 $_SESSION['DUMMY_ARRAY'][$key]['augmentation_duree'] = $_POST['augmentation_duree'];
                 $_SESSION['DUMMY_ARRAY'][$key]['augmentation_prix'] = $_POST['augmentation_prix'];
+     
+
             }
         }
    ?>
