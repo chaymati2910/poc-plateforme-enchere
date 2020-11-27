@@ -49,7 +49,10 @@ if(isset($_POST['submit_desactiver'])){
             <tbody>
 
             <!--Boucle pour chaque items dans le tableau dans la variable session-->
-            <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
+            <?php $dummyArray = $_SESSION['DUMMY_ARRAY'];
+            $ordreDummyArray = array_reverse($dummyArray);
+            ?>
+            <?php foreach($ordreDummyArray as $items) :?>
                 <tr>
                     <td id="<?= $items['id'] ?>" class="">
                         <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail"
