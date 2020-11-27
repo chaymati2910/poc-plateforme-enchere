@@ -15,8 +15,8 @@
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <label class="fileUpload d-flex justify-content-center align-items-center bg-light">
-                Image upload
-                <input type="file" name="image_upload" style="display: none;">
+                Image upload <!----->
+                <input type="file" name="image_upload" style="display: none;" id="image_upload" >
     
             </label>
         </div>

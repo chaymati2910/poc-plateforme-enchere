@@ -55,8 +55,8 @@
     </div>
     <div class="d-flex justify-content-center align-items-center">
     <label class="fileUpload d-flex justify-content-center align-items-center bg-light">
-        Image upload
-        <input type="file" value="<?=$items['image_upload']?>" name="image_upload" >
+        Image upload <!---->
+        <input type="file" value="<?=$items['image_upload']?>" name="image_upload" id="image_upload" >
 
     </label>
 </div>
