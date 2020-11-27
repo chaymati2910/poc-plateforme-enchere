@@ -21,6 +21,7 @@
         <!--Boucle pour chaque items dans le tableau dans la variable session-->
 
         <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?>
+        
         <?php if($items['etat'] == "actif"):?>
             <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
@@ -28,7 +29,7 @@
                 <img src="../ressources/img/<?= $items['image_upload'] ?>" class="card-img-top img-fluid" style="height:230px;"
                     alt="...">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold"><?= $items['description'] ?></h5>
+                    <h5 class="card-title font-weight-bold"><?php echo $items['description'] ?></h5> <!--on peut utiliser le chevron et le point d'interrogation et le egale pour remplacer le php echo-->
                     <h4 class="display-6 font-weight-bold"><?= $items['prix_lancement'] ?> €</h4>
                     <p class="card-text m-0">Prix du clic : <?= $items['prix_clic'] ?> cts</p>
                     <p class="card-text mb-4">Prix de l'enchère : <?= $items['augmentation_prix'] ?> cts/clic</p>
