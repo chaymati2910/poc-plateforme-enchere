@@ -84,45 +84,6 @@
             
         }
         };   
-
-        function calculDate($date){
-            date_default_timezone_set("Indian/Reunion");//On reprend le meme fuseau horaire
-            $timeFin = $date; //On recupere la date de fin enregistrée
-            $timeAct = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")); //On prend la date actuelle
-            $timeRemaining = $timeFin - $timeAct; //On fait la difference
-            //verification si termine
-            if($timeRemaining <= 0){ //Si c'est à 0 alors l'enchere est terminée
-                echo "TERMINE";
-            }else{
-                //conversion du temps restant
-                $min_rest = $timeRemaining / 60;
-                $heure_rest = $min_rest / 60;
-                $jours_rest = $heure_rest / 24;
-                $sec_rest = floor($timeRemaining % 60);
-                $min_rest = floor($min_rest % 60);
-                $heure_rest = floor($heure_rest % 24);
-                $jours_rest = floor($jours_rest);
-
-                echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
-            }
-            
-        }
-        function conversion($seconds){
-            if($seconds <= 0){ //Si c'est à 0 alors l'enchere est terminée
-                echo "TERMINE";
-            }else{
-                //conversion du temps restant
-                $min_rest = $seconds / 60;
-                $heure_rest = $min_rest / 60;
-                $jours_rest = $heure_rest / 24;
-                $sec_rest = floor($seconds % 60);
-                $min_rest = floor($min_rest % 60);
-                $heure_rest = floor($heure_rest % 24);
-                $jours_rest = floor($jours_rest);
-
-                echo $jours_rest . "j " . $heure_rest . "h " . $min_rest . "min " . $sec_rest . "s ";
-            }
-        }
     ?>
 
   

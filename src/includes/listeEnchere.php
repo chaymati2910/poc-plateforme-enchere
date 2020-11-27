@@ -43,19 +43,15 @@
             </div>
 
             <script>
-                var end = <?= $items['date_fin']; ?>; // récupére la donnée dans le tableau PHP USELESS
-                var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>; //USELESS
-                //var btn = document.getElementsByClassName('btn-listEnchere');
                 var timer = setInterval(function countDown() {
                     var tempAct = new Date();
                     var heure = Math.floor(tempAct.getTime() / 1000);
                     var timeRemaining = <?php echo $items['date_fin']?> - heure;
-
                     var daysRemaining = parseInt(timeRemaining); // conversion en jours
                     var hoursRemaining = parseInt(timeRemaining / 3600); // conversion en heures
                     var minutesRemaining = parseInt((timeRemaining % 3600) / 60); // conversion en minutes
                     var secondsRemaining = parseInt((timeRemaining % 3600) % 60); // conversion en secondes
-                    document.getElementById('<?= $items['id'] ?>').innerHTML = hoursRemaining + ' h : ' + minutesRemaining + ' m : ' + secondsRemaining + ' s ';
+                    document.getElementById('<?= $items['id'] ?>').innerHTML = daysRemaining + ' j : ' + hoursRemaining + ' h : ' + minutesRemaining + ' m : ' + secondsRemaining + ' s ';
                     if (timeRemaining <= 0) {
                         document.getElementById('<?= $items['id'] ?>').innerHTML = "EXPIRE";
                         document.getElementById('_<?= $items['id'] ?>').setAttribute('disabled', ''); // Bouton disabled quand temps expiré
