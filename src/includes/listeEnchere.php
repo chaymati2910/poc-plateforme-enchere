@@ -19,11 +19,11 @@
     <div class=" d-flex justify-content-center flex-wrap">
 
         <!--Boucle pour chaque items dans le tableau dans la variable session-->
-        <?php //$dummyArray = $_SESSION['DUMMY_ARRAY'];
-           // $ordreDummyArray = array_reverse($dummyArray);
-        ?>
-        <?php foreach($_SESSION['DUMMY_ARRAY'] as $key => $items) :?> 
-                
+        <?php $dummyArray = $_SESSION['DUMMY_ARRAY'];
+            $ordreDummyArray = array_reverse($dummyArray);
+            ?>
+        <?php foreach($ordreDummyArray as $key => $items) :?>
+        
         <?php if($items['etat'] == "actif"):?>
             <div class="card  shadow m-lg-4" style="width: 18rem;">
                 <div class="duree d-flex position-absolute w-50 justify-content-center align-items-center font-weight-bold"
@@ -45,14 +45,10 @@
             </div>
 
             <script>
-                var end = <?= $items['date_fin']; ?>; // récupére la donnée dans le tableau PHP USELESS
-                var dateConvert = <?php echo mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));?>; //USELESS
-                //var btn = document.getElementsByClassName('btn-listEnchere');
                 var timer = setInterval(function countDown() {
                     var tempAct = new Date();
                     var heure = Math.floor(tempAct.getTime() / 1000);
                     var timeRemaining = <?php echo $items['date_fin']?> - heure;
-
                     var daysRemaining = parseInt(timeRemaining); // conversion en jours
                     var hoursRemaining = parseInt(timeRemaining / 3600); // conversion en heures
                     var minutesRemaining = parseInt((timeRemaining % 3600) / 60); // conversion en minutes
