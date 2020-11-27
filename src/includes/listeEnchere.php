@@ -58,6 +58,8 @@
                     if (timeRemaining <= 0) {
                         document.getElementById('<?= $items['id'] ?>').innerHTML = "EXPIRE";
                         document.getElementById('_<?= $items['id'] ?>').setAttribute('disabled', ''); // Bouton disabled quand temps expiré
+                        document.getElementById('_<?= $items['id'] ?>').classList.remove('btn-listEnchere');
+                        document.getElementById('_<?= $items['id'] ?>').classList.add('btn-listEnchere2');
                     }
                 }, 1000); // répéte la fonction toutes les 1 seconde
             </script>

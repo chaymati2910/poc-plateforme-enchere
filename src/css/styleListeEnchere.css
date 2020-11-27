@@ -29,6 +29,16 @@ html, body{
     background-color: #81C784;
 }
 
+.btn-listEnchere2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9800!important;
+    border: none;
+    width: 160px;
+    height: 35px;
+    font-size: 18px;
+}
+
 .btn-manager {
     font-weight: bold;
     text-transform: uppercase;
