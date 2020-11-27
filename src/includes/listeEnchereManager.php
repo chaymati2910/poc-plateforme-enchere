@@ -115,8 +115,7 @@ if(isset($_POST['submit_desactiver'])){
                         <!--Gestion_des_modifications_apporter_aux_enchères_david-->
                         <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire_david-->
                         <form method="POST" action="modificationenchere.php?id=<?=$items['id']?>" class="d-flex justify-content-center">
-                            <input name="repere" value="<?=$items['id']?>" style="display:none;">
-                            <button class="btn btn-light  mt-2" type="submit" name="submit_parametre" value="1"
+                            <button class="btn btn-light  mt-2" type="submit" value="1"
                                 class="btn btn-warning p-0 align-items-center">Modifier</button>
                         </form>
                     </td>

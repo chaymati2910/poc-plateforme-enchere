@@ -25,16 +25,29 @@
 </div>
 
 
-
 <?php if(isset($_POST['submit_parametre'])):?>
    <!---->
+   <?php 
+        $id = $_GET['id'];
+        foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
+            if($items['id'] == $id){
+                $_SESSION['DUMMY_ARRAY'][$key]['description'] =  $_POST['description'];
+                $_SESSION['DUMMY_ARRAY'][$key]['prix_lancement'] =  $_POST['prix_lancement'];
+                $_SESSION['DUMMY_ARRAY'][$key]['duree'] = $_POST['duree'];
+                $_SESSION['DUMMY_ARRAY'][$key]['prix_clic'] = $_POST['prix_clic'];
+                $_SESSION['DUMMY_ARRAY'][$key]['augmentation_duree'] = $_POST['augmentation_duree'];
+                $_SESSION['DUMMY_ARRAY'][$key]['augmentation_prix'] = $_POST['augmentation_prix'];
+            }
+        }
+   ?>
+
 <?php endif ?>
 
 <!--Pour chaque éléments items, on récupère les variables à réaffecter -->   
 <?php foreach($_SESSION['DUMMY_ARRAY'] as $items) :?>
     <?php 
         if($_GET['id'] == $items['id']):?>
-<form class="container-fluid w-100 d-flex justify-content-center align-items-center flex-column" method="POST" enctype="multipart/form-data" action="ajoutEnchere.php">
+<form class="container-fluid w-100 d-flex justify-content-center align-items-center flex-column" method="POST" enctype="multipart/form-data" action="">
     <div class="d-flex justify-content-center align-items-center mb-3 items bg-light">
         <label class="labelForm" for="#description">Description :</label>
         
@@ -69,7 +82,7 @@
         <input type="number" class="form-control" aria-label="augmentation_duree" placeholder="En secondes" name="augmentation_duree" value="<?= $items['augmentation_duree']?>" required id="augmentation_duree" min="0" aria-describedby="basic-addon1">
     </div>
     <div class="d-flex justify-content-center align-items-center">
-        <button type="submit_parametre" name="submit_parametre" class="btn btn-warning text-uppercase text-white font-weight-bold btn AjoutEnchere mb-5" style="width:220px; height:80px;">Enregistrer modification</button>
+        <button type="submit" name="submit_parametre" class="btn btn-warning text-uppercase text-white font-weight-bold btn AjoutEnchere mb-5" style="width:220px; height:80px;">Enregistrer modification</button>
     </div>
 </form>
 
