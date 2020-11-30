@@ -1,6 +1,3 @@
 # Ignore all files with the following extensions
-*.jpg
-*.jpeg
-*.gif
 /vendor/
-/img/palette-couleur/
+
