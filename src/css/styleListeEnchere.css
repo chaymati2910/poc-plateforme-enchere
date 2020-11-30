@@ -61,6 +61,12 @@ html, body{
     cursor: default !important;
 }
 
+.inactif {
+    font-weight: 400;
+    font-size: xx-large;
+    color: grey;
+}
+
 /******** MEDIA QUERIES ********/
 
 @media screen and (max-width: 380px) {

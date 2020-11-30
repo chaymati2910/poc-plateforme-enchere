@@ -1,18 +1,14 @@
 <?php 
 
-//Ici on gere la modification de l'état de l'enchere
+//Ici on gere la modification de l'état de l'enchere Si c'est le bouton activer ou desactiver
 if(isset($_POST['submit_activer'])){
-    $id = $_POST['indice'];
+    $id = $_POST['indice'];//On stock dans l'input du nom indice l'id en valeur mais il est en display none afin de ne pas passer par l'url
     
-    foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
+    foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){//pour chaque enchere on va chercher quel endroit du tableau se trouve celui dont on veut modifier selon l'id
         if($items['id'] == $id){
-            if($items['etat'] != 'actif'){
-                $timeTO = (int)$items['duree'];
-                date_default_timezone_set("Indian/Reunion");
-                $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
-                $items['etat'] = 'actif';
-                $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-            }
+            date_default_timezone_set("Indian/Reunion");
+            $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ (int)$items['duree'], date("i"), date("s"), date("m"), date("d"), date("Y"));
+            $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  'actif'; //A l'emplacement (key) du tableau on change l'etat qui est actif et la date de fin e nsecondes
         }
     }
 }
@@ -20,14 +16,12 @@ if(isset($_POST['submit_desactiver'])){
     $id = $_POST['indice'];
     foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
         if($items['id'] == $id){
-            if($items['etat'] != 'inactif'){
-                $items['etat'] = 'inactif';
-                $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-            }
+            $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  'inactif'; //A l'emplacement (key) du tableau on change l'etat en inactif
         }
     }
 }
 ?>
+
 
 <div id="articles" class="container-fluid mt-5">
     <h2 class="text-center mb-5 font-weight-bold">ARTICLES AJOUTES</h2>
@@ -43,19 +37,17 @@ if(isset($_POST['submit_desactiver'])){
                     <th class="align-middle text-center" scope="col">Prix du clic</th>
                     <th class="align-middle text-center" scope="col">Augmentation du prix</th>
                     <th class="align-middle text-center" scope="col">Augmentation durée</th>
+                    <th class="align-middle text-center" scope="col">Gain</th>
                     <th class="align-middle text-center" scope="col">Activer / Desactiver</th>
                 </tr>
             </thead>
             <tbody>
 
             <!--Boucle pour chaque items dans le tableau dans la variable session-->
-            <?php $dummyArray = $_SESSION['DUMMY_ARRAY'];
-            $ordreDummyArray = array_reverse($dummyArray);
-            ?>
-            <?php foreach($ordreDummyArray as $items) :?>
+            <?php foreach(array_reverse($_SESSION['DUMMY_ARRAY']) as $items) :?>
                 <tr>
                     <td id="<?= $items['id'] ?>" class="">
-                        <img src="../ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail"
+                        <img src="ressources/img/<?= $items['image_upload'] ?>" alt="" class="img-thumbnail"
                             style="max-width: 150px; border: none;">
                     </td>
                     <td class="align-middle text-center"><?= $items['description'] ?></td>
@@ -64,7 +56,8 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['duree']?> h</td>
                     <td class="align-middle text-center"><?= $items['prix_clic'] ?> €</td>
                     <td class="align-middle text-center"><?= $items['augmentation_prix'] ?> €</td>
-                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> secs</td>
+                    <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> sec</td>
+                    <td class="align-middle text-center"><?= $items['gain'] ?> €</td>
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?> ">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
@@ -118,8 +111,15 @@ if(isset($_POST['submit_desactiver'])){
                         <!--Gestion_des_modifications_apporter_aux_enchères_david-->
                         <!--Ajout du boutton modifier qui envoie à la page de modification_formulaire_david-->
                         <form method="POST" action="modificationenchere.php?id=<?=$items['id']?>" class="d-flex justify-content-center">
-                            <button class="btn btn-light  mt-2" type="submit" value="1"
-                                class="btn btn-warning p-0 align-items-center">Modifier</button>
+                        <!--Nous partons sur le principe qu'une enchere déjà activée ne peut pas être modifiée-->
+                            <button 
+                                class="btn btn-light  mt-2" 
+                                type="submit" 
+                                value="1"
+                                class="btn btn-warning p-0 align-items-center" 
+                                <?php if($items['etat'] == "actif"){echo "disabled";};?>>
+                                    Modifier
+                            </button>
                         </form>
                     </td>
                 </tr>
